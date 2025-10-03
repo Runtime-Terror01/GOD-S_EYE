@@ -23,6 +23,8 @@ from aiohttp import web
 import logging
 
 import mimetypes
+import numpy as np
+import torch
 from comfy.cli_args import args
 import comfy.utils
 import comfy.model_management
@@ -38,6 +40,7 @@ from app.custom_node_manager import CustomNodeManager
 from typing import Optional, Union
 from api_server.routes.internal.internal_routes import InternalRoutes
 from protocol import BinaryEventTypes
+from api_server.services.live_processing import get_live_manager
 
 # Import cache control middleware
 from middleware.cache_middleware import cache_control
@@ -182,6 +185,9 @@ class PromptServer():
         self.routes = routes
         self.last_node_id = None
         self.client_id = None
+
+        # Initialize live processing manager singleton
+        self.live_manager = get_live_manager(self)
 
         self.on_prompt_handlers = []
 
@@ -775,6 +781,47 @@ class PromptServer():
             if free_memory:
                 self.prompt_queue.set_flag("free_memory", free_memory)
             return web.Response(status=200)
+
+        @routes.post("/live/start")
+        async def live_start(request):
+            json_data = await request.json()
+            prompt = json_data.get("prompt")
+            if prompt is None:
+                return web.json_response({"error": "No prompt provided"}, status=400)
+            prompt_id = str(json_data.get("prompt_id", uuid.uuid4()))
+            partial = json_data.get("partial_execution_targets")
+            valid = await execution.validate_prompt(prompt_id, prompt, partial)
+            if not valid[0]:
+                return web.json_response({"error": valid[1], "node_errors": valid[3]}, status=400)
+            extra_data = json_data.get("extra_data", {})
+            execute_outputs = valid[2]
+            try:
+                self.live_manager.start(prompt, extra_data, execute_outputs)
+            except RuntimeError as e:
+                return web.json_response({"error": str(e)}, status=409)
+            return web.json_response({"status": "started"})
+
+        @routes.post("/live/stop")
+        async def live_stop(request):
+            self.live_manager.stop()
+            return web.json_response({"status": "stopped"})
+
+        @routes.post("/live/frame")
+        async def live_frame(request):
+            # Accept multipart with field name 'image'
+            post = await request.post()
+            image = post.get("image")
+            if image is None or not hasattr(image, "file"):
+                return web.json_response({"error": "No image uploaded"}, status=400)
+            try:
+                pil = Image.open(image.file).convert("RGB")
+                arr = np.array(pil).astype(np.float32) / 255.0
+                tensor = torch.from_numpy(arr)[None,]
+                self.live_manager.frame_buffer.set_frame(tensor)
+                return web.json_response({"status": "ok"})
+            except Exception as e:
+                logging.exception("Failed to process uploaded frame: %s", e)
+                return web.json_response({"error": "Invalid image"}, status=400)
 
         @routes.post("/history")
         async def post_history(request):

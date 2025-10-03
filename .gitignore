@@ -19,7 +19,7 @@ venv/
 /tests-ui/data/object_info.json
 /user/
 *.log
-web_custom_versions/
+# web_custom_versions/
 .DS_Store
 openapi.yaml
 filtered-openapi.yaml
