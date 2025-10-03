@@ -2,6 +2,8 @@ import os
 import sys
 import asyncio
 import traceback
+import asyncio
+import socketio
 
 import nodes
 import folder_paths
@@ -143,6 +145,28 @@ def create_origin_only_middleware():
 
     return origin_only_middleware
 
+class LiveProcessing:
+    def __init__(self, server):
+        self.server = server
+        self.is_live = False
+
+    def start_live_processing(self, sid, prompt):
+        if self.is_live:
+            return
+        print("Starting Live Processing")
+        self.is_live = True
+        self.server.loop.create_task(self.server.prompt_queue.run_live_processing(prompt, sid))
+
+    def stop_live_processing(self):
+        if not self.is_live:
+            return
+        print("Stopping Live Processing")
+        self.is_live = False
+        self.server.prompt_queue.stop_live_processing()
+
+    def is_live_processing(self):
+        return self.is_live
+     
 class PromptServer():
     def __init__(self, loop):
         PromptServer.instance = self
@@ -161,6 +185,12 @@ class PromptServer():
         self.messages = asyncio.Queue()
         self.client_session:Optional[aiohttp.ClientSession] = None
         self.number = 0
+        self.live_processing = LiveProcessing(self)
+
+        sio = socketio.AsyncServer(async_mode='aiohttp', cors_allowed_origins="*")
+        self.app = web.Application(loop=loop)
+        sio.attach(self.app)
+        self.sio = sio
 
         middlewares = [cache_control]
         if args.enable_compress_response_body:
@@ -270,6 +300,15 @@ class PromptServer():
 
             return web.json_response(model_types)
 
+        @sio.event
+        def live_processing_start(sid, data):
+            prompt = data.get('prompt')
+            self.live_processing.start_live_processing(sid, prompt)
+
+        @sio.event
+        def live_processing_stop(sid, data):
+            self.live_processing.stop_live_processing()
+    
         @routes.get("/models/{folder}")
         async def get_models(request):
             folder = request.match_info.get("folder", None)

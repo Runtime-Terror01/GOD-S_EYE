@@ -9,7 +9,7 @@ import traceback
 from enum import Enum
 from typing import List, Literal, NamedTuple, Optional, Union
 import asyncio
-
+import uuid
 import torch
 
 import comfy.model_management
@@ -1084,6 +1084,48 @@ class PromptQueue:
         self.currently_running = {}
         self.history = {}
         self.flags = {}
+        self.live_processing_task = None
+
+    def start_live_processing(self, prompt, client_id):
+        self.live_processing_task = asyncio.create_task(self.run_live_processing(prompt, client_id))
+
+    def stop_live_processing(self):
+        if self.live_processing_task:
+            self.live_processing_task.cancel()
+            self.live_processing_task = None
+
+    async def run_live_processing(self, prompt, client_id):
+        self.live_processing_task = asyncio.current_task()
+        
+        if prompt is None:
+            # If no prompt is sent from the frontend, use the last known graph
+            prompt = self.server.graph.serialize()
+
+        extra_data = {'client_id': client_id}
+        
+        try:
+            # Get graph and execution order once
+            graph = self.server.get_graph_from_prompt(prompt)
+            outputs_to_execute = graph.get_nodes_to_execute()
+        except Exception as e:
+            print(f"Error during graph processing: {e}")
+            self.server.send_sync("execution_error", { "prompt_id": str(uuid.uuid4()), "exception_message": str(e) }, sid=client_id)
+            return
+
+        while True:
+            try:
+                prompt_id = str(uuid.uuid4())
+                # Execute the graph in a loop
+                await self.execute_nodes(graph, outputs_to_execute, prompt, prompt_id, extra_data)
+                # A small sleep to prevent the loop from running too fast
+                await asyncio.sleep(0.01) 
+            except asyncio.CancelledError:
+                print("Live processing task cancelled.")
+                break
+            except Exception as e:
+                print(f"Error in live processing loop: {e}")
+                self.server.send_sync("execution_error", { "prompt_id": prompt_id, "exception_message": str(e) }, sid=client_id)
+                break
 
     def put(self, item):
         with self.mutex:

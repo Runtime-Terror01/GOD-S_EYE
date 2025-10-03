@@ -51,6 +51,41 @@ def interrupt_processing(value=True):
 
 MAX_RESOLUTION=16384
 
+# In nodes.py
+
+class LiveFrameInjector:
+    @classmethod
+    def INPUT_TYPES(s):
+        return {
+            "required": {
+                "frame_rate": ("INT", {"default": 30, "min": 1, "max": 60}),
+            },
+        }
+
+    RETURN_TYPES = ("IMAGE",)
+    FUNCTION = "inject_frame"
+    CATEGORY = "input"
+
+    def __init__(self):
+        self.frame = None
+
+    def set_frame(self, frame):
+        self.frame = frame
+
+    def inject_frame(self, frame_rate):
+        # In a real implementation, this method would get the frame from a live video stream.
+        # For now, it will return a placeholder tensor.
+        if self.frame is not None:
+            return (self.frame,)
+        else:
+            # Return a blank image if no frame is available
+            return (torch.zeros((1, 256, 256, 3), dtype=torch.float32, device="cpu"),)
+
+NODE_CLASS_MAPPINGS = {
+    # ... other mappings
+    "LiveFrameInjector": LiveFrameInjector,
+}
+
 class CLIPTextEncode(ComfyNodeABC):
     @classmethod
     def INPUT_TYPES(s) -> InputTypeDict:
