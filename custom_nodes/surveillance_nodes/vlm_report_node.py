@@ -887,30 +887,28 @@ class VLMReportNode:
     
     def _save_report(self, report: Dict, storage_directory: str):
         """Save report to storage"""
-        
         storage_dir = Path(storage_directory)
         reports_dir = storage_dir / "vlm_reports"
         reports_dir.mkdir(exist_ok=True)
         
-        # Save full report
-        report_path = reports_dir / f"report_{report['report_id']}.json"
-        with open(report_path, 'w') as f:
-            # Create a copy without large fields for JSON storage
-            save_report = {k: v for k, v in report.items() 
-                          if k not in ['raw_vlm_response']}
-            json.dump(save_report, f, indent=2)
-        
-        # Save comprehensive analysis as markdown
-        analysis_path = reports_dir / f"analysis_{report['report_id']}.md"
-        with open(analysis_path, 'w') as f:
-            f.write(report['comprehensive_report'])
-        
-        # Save executive summary
+        # Save executive summary (with UTF-8 encoding)
         summary_path = reports_dir / f"summary_{report['report_id']}.md"
-        with open(summary_path, 'w') as f:
+        with open(summary_path, 'w', encoding='utf-8') as f:
             f.write(report['executive_summary'])
         
         print(f"✓ Report saved to {reports_dir}")
+        
+        # Save comprehensive analysis as markdown (with UTF-8 encoding)
+        analysis_path = reports_dir / f"analysis_{report['report_id']}.md"
+        with open(analysis_path, 'w', encoding='utf-8') as f:
+            f.write(report['comprehensive_report'])
+        
+        # Save full report as JSON (with UTF-8 encoding)
+        report_path = reports_dir / f"report_{report['report_id']}.json"
+        with open(report_path, 'w', encoding='utf-8') as f:
+            # Create a copy without large fields for JSON storage
+            save_report = {k: v for k, v in report.items() if k not in ['raw_vlm_response']}
+            json.dump(save_report, f, indent=2, ensure_ascii=False)
 
 # Node class mappings
 NODE_CLASS_MAPPINGS = {

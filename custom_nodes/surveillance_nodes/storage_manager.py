@@ -23,6 +23,13 @@ try:
     from chromadb.config import Settings
 except ImportError:
     print("Install pymongo and chromadb for full functionality")
+    
+config = {
+    'storage_root': './surveillance_storage',
+    'mongo_uri': 'mongodb://localhost:27017/',
+    'chroma_path': './surveillance_storage/chroma'
+}
+
 
 class StorageManager:
     """Central storage management system for all pipeline data"""

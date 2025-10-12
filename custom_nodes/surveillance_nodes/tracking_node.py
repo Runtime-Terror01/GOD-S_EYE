@@ -119,7 +119,9 @@ class TrackingNode:
         self.tracker = None
         self.track_history = defaultdict(list)
         self.active_tracks = {}
-        
+        self.storage_root = Path("./surveillance_storage")
+        self.frames_dir = self.storage_root / "frames"
+            
     @classmethod
     def INPUT_TYPES(cls):
         return {
@@ -350,12 +352,12 @@ class TrackingNode:
             'all_tracks': valid_tracks
         }
         
-        # Save metadata
-        session_dir = Path(detection_metadata.get('session_id', 'default'))
-        if 'storage_directory' in detection_metadata:
-            session_dir = Path(detection_metadata['storage_directory'])
-        
+        # Save metadata with correct path
+        session_id = detection_metadata.get('session_id', 'default')
+        session_dir = self.frames_dir / str(session_id)
+        session_dir.mkdir(parents=True, exist_ok=True)  # Create if doesn't exist
         metadata_path = session_dir / "tracking_metadata.json"
+
         with open(metadata_path, 'w') as f:
             # Save subset without full track data
             save_meta = {k: v for k, v in track_metadata.items() if k != 'all_tracks'}
