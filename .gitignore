@@ -25,3 +25,5 @@ openapi.yaml
 filtered-openapi.yaml
 uv.lock
 custom_nodes/input_video_node
+surveillance_storage
+.env
