@@ -1,0 +1,84 @@
+{
+  "alert_id": "ade18cbc-1736-4425-956f-29ea271260eb",
+  "session_id": "b9f0397d-fb4b-4d9e-87e4-dd73eab83176",
+  "timestamp": "2025-10-13T04:08:37.234789",
+  "threat_level": "CRITICAL",
+  "threat_score": 175.0,
+  "alert_type": "multi_threat",
+  "threats_detected": [
+    "suspicious_objects",
+    "loitering",
+    "loitering",
+    "loitering",
+    "erratic_movement"
+  ],
+  "description": "CRITICAL ALERT: Suspicious loitering behavior detected",
+  "evidence": {
+    "frame_ids": [],
+    "track_ids": [
+      0,
+      11,
+      14
+    ],
+    "detailed_analysis": {
+      "suspicious_objects": {
+        "suspicious_objects": [
+          {
+            "type": "suitcase",
+            "confidence": 0.6080986857414246,
+            "frame_id": "b4d6184d-059d-4d41-8c5d-ec49e00ec32d"
+          },
+          {
+            "type": "suitcase",
+            "confidence": 0.5458460450172424,
+            "frame_id": "c41c31e5-fa90-4f91-8f73-df2c1a35355b"
+          },
+          {
+            "type": "suitcase",
+            "confidence": 0.86566561460495,
+            "frame_id": "ed566e37-aec8-49ef-b072-ea55653bd74a"
+          },
+          {
+            "type": "backpack",
+            "confidence": 0.6736365556716919,
+            "frame_id": "867f4d5c-5e69-40b2-8a85-cb43a6da041b"
+          }
+        ],
+        "threat_score": 60,
+        "categories": {
+          "suitcase": 3,
+          "backpack": 1
+        }
+      },
+      "behavior": {
+        "patterns_detected": [
+          "loitering",
+          "loitering",
+          "loitering",
+          "erratic_movement"
+        ],
+        "threat_score": 115,
+        "suspicious_tracks": [
+          0,
+          11,
+          14,
+          0
+        ]
+      }
+    }
+  },
+  "location": "Unknown",
+  "requires_action": true,
+  "recommended_actions": [
+    "IMMEDIATE: Contact law enforcement",
+    "IMMEDIATE: Dispatch security to location",
+    "IMMEDIATE: Initiate lockdown procedures if applicable",
+    "Dispatch security to question individual",
+    "Check for associated vehicles or accomplices"
+  ],
+  "metadata": {
+    "total_frames_analyzed": 177,
+    "total_detections": 93,
+    "total_tracks": 3
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "report_id": "acc5026e-dc13-409a-a1d9-52ee8ddfb248",
+  "session_id": "b9f0397d-fb4b-4d9e-87e4-dd73eab83176",
+  "timestamp": "2025-10-13T04:08:57.993113",
+  "video_source": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+  "analysis_mode": "comprehensive",
+  "vlm_provider": "gemini-2.0-flash",
+  "frames_analyzed": 30,
+  "total_frames": 177,
+  "comprehensive_report": "# COMPREHENSIVE SURVEILLANCE ANALYSIS REPORT\n\nGenerated: 2025-10-13 04:08:57\n================================================================================\n\n## EXECUTIVE OVERVIEW\n- Total Objects Detected: 93\n- Unique Tracks: 3\n- Threat Frames: 59\n- Alert Level: CRITICAL\n- Threats Detected: suspicious_objects, loitering, loitering, loitering, erratic_movement\n\n================================================================================\n\n## TEMPORAL ANALYSIS\n\n\n## DETECTED OBJECTS & ENTITIES\n\n- person: 72 instances \n- tv: 5 instances \n- car: 3 instances \n- suitcase: 3 instances \n- truck: 2 instances \n- chair: 2 instances \n- train: 1 instances \n- cow: 1 instances \n- fire hydrant: 1 instances \n- cat: 1 instances \n- backpack: 1 instances \n- traffic light: 1 instances \n\n## BEHAVIORAL PATTERNS\n\n### Loitering Detected\n- Track 0: Duration 91.0s, Severity: high\n- Track 11: Duration 141.0s, Severity: high\n- Track 14: Duration 54.0s, Severity: medium\n\n### Erratic Movement\n- Track 0: Variance 260.59, Severity: medium\n\n## THREAT ASSESSMENT\n\n- **Threat Assessment:**\n- *   **High Threat Level:** The presence of military forces in an urban area indicates a high-risk situation.\n- *   **Collateral Damage:** There's a risk of collateral damage to civilians and property due to the operation.\n- *   **Unknown Objectives:** The lack of specific information about the operation's objective makes it difficult to assess the potential risks.\n- 1.  **Immediate Investigation:** Thoroughly investigate the operation's objective, the identities of the personnel involved, and the potential risks.\n- 3.  **Risk Mitigation:** Implement risk mitigation strategies to minimize potential harm to civilians and property.\n\n## AI SCENE UNDERSTANDING\n\n- **General Overview:** The footage appears to depict a military operation in an urban environment. Soldiers are moving through streets alongside armored vehicles. The presence of armored vehicles, armed personnel, and indications of potential conflict raise immediate security concerns. The alerts of \"suspicious_objects, loitering, erratic_movement\" further amplify these concerns.\n- *   **[00:13-00:15]** An armored vehicle and troops are seen advancing down a street lined with buildings and walls. The perspective is from a first-person point of view, possibly a soldier with a mounted weapon. The scene suggests movement toward a potential target or area of engagement. The \"erratic\\_movement\" alert could refer to tactical movements or sudden changes in direction.\n- *   **[00:38-00:44]** The soldiers are continuing movement between the vehicles and structures. Soldiers are holding their firearms.\n- **Behavioral Analysis:**\n- *   **Movement Patterns:** Troops are moving in a coordinated manner, suggesting a planned operation.\n\n================================================================================\n",
+  "executive_summary": "## EXECUTIVE SUMMARY\n\n**Analysis Period**: 2025-10-13 04:08:57\n**Total Detections**: 93 objects across 66 frames\n**Threat Indicator**: 33.3% of frames contain potential threats\n\n**Key Findings**:\n⚠️ Loitering behavior detected (3 instances)\n\n**Overall Risk Level**: CRITICAL\n\n**IMMEDIATE ACTION REQUIRED**\nSecurity personnel should be dispatched immediately.\n\n**Recommendations**:\n1. Increase monitoring of area\n2. Deploy security patrol\n3. Review recent activity logs\n",
+  "risk_assessment": {
+    "level": "MEDIUM",
+    "score": 50,
+    "factors": [
+      "loitering",
+      "erratic_movement"
+    ],
+    "timestamp": "2025-10-13T04:08:57.993113"
+  },
+  "key_events": [
+    {
+      "timestamp": "multiple",
+      "event": "Potential threats detected in 59 frames",
+      "priority": "high"
+    },
+    {
+      "timestamp": "various",
+      "event": "Loitering: 3 instances",
+      "priority": "medium"
+    },
+    {
+      "timestamp": "various",
+      "event": "Erratic Movement: 1 instances",
+      "priority": "medium"
+    }
+  ],
+  "recommendations": [
+    "📋 Send security patrol to investigate",
+    "📋 Increase monitoring frequency",
+    "📋 Review access logs for anomalies",
+    "👁️ Question individuals exhibiting loitering behavior",
+    "👁️ Check for associated vehicles",
+    "📊 Review AI-identified threats for validation"
+  ],
+  "detection_summary": {
+    "total_detections": 93,
+    "frames_with_detections": 66,
+    "class_distribution": {
+      "person": 72,
+      "train": 1,
+      "truck": 2,
+      "cow": 1,
+      "fire hydrant": 1,
+      "car": 3,
+      "suitcase": 3,
+      "chair": 2,
+      "cat": 1,
+      "backpack": 1,
+      "tv": 5,
+      "traffic light": 1
+    },
+    "threat_percentage": 33.33333333333333
+  },
+  "tracking_summary": {
+    "total_tracks": 3,
+    "avg_track_length": 5.0,
+    "suspicious_patterns": [
+      "loitering",
+      "erratic_movement",
+      "abandoned_object",
+      "converging_tracks",
+      "rapid_appearance_disappearance"
+    ]
+  },
+  "alert_summary": {
+    "alert_id": "ade18cbc-1736-4425-956f-29ea271260eb",
+    "threat_level": "CRITICAL",
+    "threats_detected": [
+      "suspicious_objects",
+      "loitering",
+      "loitering",
+      "loitering",
+      "erratic_movement"
+    ],
+    "requires_action": true
+  },
+  "metadata": {
+    "duration": 176.24,
+    "fps": 25.0,
+    "resolution": {
+      "width": 636,
+      "height": 360
+    }
+  }
+}

@@ -44,7 +44,7 @@ class VideoFrameExtractorNode:
                     "tooltip": "Maximum frames to extract"
                 }),
                 "quality": ("INT", {
-                    "default": 85,
+                    "default": 100,
                     "min": 50,
                     "max": 100,
                     "tooltip": "JPEG quality for saved frames"
@@ -61,7 +61,7 @@ class VideoFrameExtractorNode:
     RETURN_TYPES = ("FRAME_METADATA",)
     RETURN_NAMES = ("frame_metadata",)
     FUNCTION = "extract_frames"
-    CATEGORY = "Surveillance/Processing"
+    CATEGORY = "Surveillance"
     
     def extract_frames(self, video, extraction_mode: str, interval_seconds: float, 
                       max_frames: int, quality: int, session_id: str = "") -> Tuple[Dict]:

@@ -25,5 +25,7 @@ openapi.yaml
 filtered-openapi.yaml
 uv.lock
 custom_nodes/input_video_node
-surveillance_storage
+# surveillance_storage
+storage
 .env
+custom_nodes\surveillance_nodes\unified_frame_extractor_node.py

@@ -1,0 +1,2681 @@
+{
+  "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+  "video_source": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+  "storage_directory": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b",
+  "extraction_timestamp": "2025-10-13T12:37:51.508279",
+  "video_properties": {
+    "fps": 25.0,
+    "total_frames": 4406,
+    "duration": 176.24,
+    "resolution": {
+      "width": 636,
+      "height": 360
+    }
+  },
+  "extraction_settings": {
+    "mode": "interval",
+    "interval_seconds": 1.0,
+    "max_frames": 300,
+    "quality": 85
+  },
+  "frames": [
+    {
+      "frame_id": "b74d532b-b361-461d-9709-7eaaa64fd054",
+      "frame_index": 0,
+      "extraction_index": 0,
+      "timestamp": 0.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000000.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "22659809-30fd-4248-b696-b5b4c4954b4a",
+      "frame_index": 25,
+      "extraction_index": 1,
+      "timestamp": 1.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000025.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "4b892633-fa6f-49ca-9b26-96de75455d26",
+      "frame_index": 50,
+      "extraction_index": 2,
+      "timestamp": 2.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000050.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "ec58d0ac-86ee-41d0-a840-97c0b913e00f",
+      "frame_index": 75,
+      "extraction_index": 3,
+      "timestamp": 3.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000075.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "f9b1c521-4239-492b-ac69-b137cefab563",
+      "frame_index": 100,
+      "extraction_index": 4,
+      "timestamp": 4.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000100.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "0258a281-873e-4ae0-8ebe-4156e355f424",
+      "frame_index": 125,
+      "extraction_index": 5,
+      "timestamp": 5.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000125.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "825eba79-b9e7-4dde-9cb1-c647e37109bd",
+      "frame_index": 150,
+      "extraction_index": 6,
+      "timestamp": 6.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000150.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "69d46a38-8d36-4ea6-8442-2a52e2e18fcf",
+      "frame_index": 175,
+      "extraction_index": 7,
+      "timestamp": 7.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000175.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "a03d95fd-bac7-4938-ab2e-d101b9e11959",
+      "frame_index": 200,
+      "extraction_index": 8,
+      "timestamp": 8.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000200.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "613d42c7-75a9-4d0e-886e-b64b06eeb5e3",
+      "frame_index": 225,
+      "extraction_index": 9,
+      "timestamp": 9.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000225.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "34b0c872-e3f3-48a1-9263-f95972fb73a7",
+      "frame_index": 250,
+      "extraction_index": 10,
+      "timestamp": 10.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000250.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "c788e03d-e053-4734-bc3c-efc7d93b2e44",
+      "frame_index": 275,
+      "extraction_index": 11,
+      "timestamp": 11.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000275.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "e3f477cf-d3bd-4375-b69d-eea6270ba547",
+      "frame_index": 300,
+      "extraction_index": 12,
+      "timestamp": 12.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000300.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "f0796caf-66f1-4396-9f85-8eabec3de17a",
+      "frame_index": 325,
+      "extraction_index": 13,
+      "timestamp": 13.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000325.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "e11fcea4-f57e-4f4f-ac9c-8357b1de88b2",
+      "frame_index": 350,
+      "extraction_index": 14,
+      "timestamp": 14.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000350.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "95b97859-b0f2-44d6-a2b3-a3166330e9d1",
+      "frame_index": 375,
+      "extraction_index": 15,
+      "timestamp": 15.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000375.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "2d06e00a-6152-47c6-981b-0f76755011b0",
+      "frame_index": 400,
+      "extraction_index": 16,
+      "timestamp": 16.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000400.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "bdd5d62a-036e-4cec-94ad-6bdfb941b4f9",
+      "frame_index": 425,
+      "extraction_index": 17,
+      "timestamp": 17.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000425.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "41648e76-5d00-41b5-a7b2-e2d1ab853fe8",
+      "frame_index": 450,
+      "extraction_index": 18,
+      "timestamp": 18.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000450.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "7baa8f1e-5a81-4bec-973c-bc58e93b9653",
+      "frame_index": 475,
+      "extraction_index": 19,
+      "timestamp": 19.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000475.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "bcc39a02-e7ef-4302-8f10-7ed6854f6112",
+      "frame_index": 500,
+      "extraction_index": 20,
+      "timestamp": 20.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000500.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "511d6464-0dae-42ad-8fb4-a47ba6a39002",
+      "frame_index": 525,
+      "extraction_index": 21,
+      "timestamp": 21.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000525.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "d3f7f5f1-5424-4e9e-b83c-580b7b057058",
+      "frame_index": 550,
+      "extraction_index": 22,
+      "timestamp": 22.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000550.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "7ca45b73-db59-4af8-9af6-96dabd12bcd4",
+      "frame_index": 575,
+      "extraction_index": 23,
+      "timestamp": 23.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000575.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "bab3163e-8ffb-4d10-bff1-fddadc454fa7",
+      "frame_index": 600,
+      "extraction_index": 24,
+      "timestamp": 24.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000600.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "75742120-6455-41c0-b579-687452084a11",
+      "frame_index": 625,
+      "extraction_index": 25,
+      "timestamp": 25.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000625.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "1d1c4f0b-d3ae-4018-a560-7055589dc67e",
+      "frame_index": 650,
+      "extraction_index": 26,
+      "timestamp": 26.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000650.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "b1f9404e-5977-405c-a7f9-6a75fc7dcc52",
+      "frame_index": 675,
+      "extraction_index": 27,
+      "timestamp": 27.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000675.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "d5bf1236-249b-41db-9f76-b5784b874e97",
+      "frame_index": 700,
+      "extraction_index": 28,
+      "timestamp": 28.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000700.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "e750aa8d-ef0f-4c17-b7f5-f6fad23a9418",
+      "frame_index": 725,
+      "extraction_index": 29,
+      "timestamp": 29.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000725.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "793cec2f-0cb7-490a-b60b-fe246ee8f5ad",
+      "frame_index": 750,
+      "extraction_index": 30,
+      "timestamp": 30.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000750.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "eeb748b6-8334-4358-b2d4-b006503b0e9f",
+      "frame_index": 775,
+      "extraction_index": 31,
+      "timestamp": 31.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000775.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "0b5d18b6-6789-4044-8f9c-dc3751743608",
+      "frame_index": 800,
+      "extraction_index": 32,
+      "timestamp": 32.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000800.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "535f2242-cd75-47b6-a71e-593e79bcbd4d",
+      "frame_index": 825,
+      "extraction_index": 33,
+      "timestamp": 33.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000825.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "df2cb645-9ae1-4cda-9a65-6e3b2ae4db2b",
+      "frame_index": 850,
+      "extraction_index": 34,
+      "timestamp": 34.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000850.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "eae3fa4c-32dc-4b6a-b6c9-a24baf3ab6b6",
+      "frame_index": 875,
+      "extraction_index": 35,
+      "timestamp": 35.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000875.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "dcbeed64-52d7-4ebd-aaa1-3c0b01f31201",
+      "frame_index": 900,
+      "extraction_index": 36,
+      "timestamp": 36.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000900.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "06a8b705-da6b-497f-8801-c0e716b584f4",
+      "frame_index": 925,
+      "extraction_index": 37,
+      "timestamp": 37.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000925.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "4440e973-64f1-45a7-aded-5335c82d8974",
+      "frame_index": 950,
+      "extraction_index": 38,
+      "timestamp": 38.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000950.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "b0c4cc85-0b72-4c0f-b885-f9b023e985aa",
+      "frame_index": 975,
+      "extraction_index": 39,
+      "timestamp": 39.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_000975.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "61f365e8-a867-4c72-843e-2cdea88dcf47",
+      "frame_index": 1000,
+      "extraction_index": 40,
+      "timestamp": 40.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001000.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "44175c1a-2aa1-464e-9bf7-5f550e86ebee",
+      "frame_index": 1025,
+      "extraction_index": 41,
+      "timestamp": 41.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001025.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "63bd27d0-0391-478f-9e46-3b2306d1be36",
+      "frame_index": 1050,
+      "extraction_index": 42,
+      "timestamp": 42.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001050.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "f72e44e5-324c-4eff-ac53-96d667f95754",
+      "frame_index": 1075,
+      "extraction_index": 43,
+      "timestamp": 43.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001075.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "b8fa36a7-fb4f-4e43-acdd-4e1dec77717d",
+      "frame_index": 1100,
+      "extraction_index": 44,
+      "timestamp": 44.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001100.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "a62b6094-866b-4ac7-82d5-4a7bb103477a",
+      "frame_index": 1125,
+      "extraction_index": 45,
+      "timestamp": 45.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001125.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "6367a335-8db3-4ea8-9ee5-3a885a3e0b27",
+      "frame_index": 1150,
+      "extraction_index": 46,
+      "timestamp": 46.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001150.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "7f97a73d-23d6-4a06-bd1d-238ae6050f60",
+      "frame_index": 1175,
+      "extraction_index": 47,
+      "timestamp": 47.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001175.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "d148dd25-a9d1-4e70-8657-a8bf66944353",
+      "frame_index": 1200,
+      "extraction_index": 48,
+      "timestamp": 48.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001200.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "722a6255-ffbb-44a4-9529-e59489d136c7",
+      "frame_index": 1225,
+      "extraction_index": 49,
+      "timestamp": 49.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001225.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "7e8e9d81-8d5d-4c7c-9c04-4e38722d76a2",
+      "frame_index": 1250,
+      "extraction_index": 50,
+      "timestamp": 50.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001250.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "64f058a1-fb2c-416e-9b5c-66eb716b7f59",
+      "frame_index": 1275,
+      "extraction_index": 51,
+      "timestamp": 51.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001275.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "8d35c68c-a249-4362-bdfd-4203a8b2fa5f",
+      "frame_index": 1300,
+      "extraction_index": 52,
+      "timestamp": 52.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001300.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "1c952e8b-f1d7-4511-a258-92526f0b70e2",
+      "frame_index": 1325,
+      "extraction_index": 53,
+      "timestamp": 53.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001325.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "cb3d40b1-ecc2-4787-920d-6c48d7be27c8",
+      "frame_index": 1350,
+      "extraction_index": 54,
+      "timestamp": 54.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001350.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "cae2e255-e1f3-4263-8bfc-b74e01eec38c",
+      "frame_index": 1375,
+      "extraction_index": 55,
+      "timestamp": 55.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001375.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "ba060b74-707c-4139-bb27-106f7e074fab",
+      "frame_index": 1400,
+      "extraction_index": 56,
+      "timestamp": 56.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001400.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "e97f11b5-18d9-45fe-829e-4d7edced2a0b",
+      "frame_index": 1425,
+      "extraction_index": 57,
+      "timestamp": 57.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001425.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "e8601717-cef2-4bd0-ba8c-b3e6736ad307",
+      "frame_index": 1450,
+      "extraction_index": 58,
+      "timestamp": 58.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001450.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "83a2ccc7-abcb-4a5a-ae17-c1b26a51fd00",
+      "frame_index": 1475,
+      "extraction_index": 59,
+      "timestamp": 59.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001475.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "b419a7ec-1f53-4380-b396-90b5ce962734",
+      "frame_index": 1500,
+      "extraction_index": 60,
+      "timestamp": 60.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001500.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "3c985e10-ef22-48ff-90bd-c72e12b842de",
+      "frame_index": 1525,
+      "extraction_index": 61,
+      "timestamp": 61.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001525.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "2867cff2-7e72-4163-8617-7c8250603000",
+      "frame_index": 1550,
+      "extraction_index": 62,
+      "timestamp": 62.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001550.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "f85a6076-632b-401f-94df-ddc84652de7c",
+      "frame_index": 1575,
+      "extraction_index": 63,
+      "timestamp": 63.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001575.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "f9487368-4529-45da-b8df-00a7ef78a806",
+      "frame_index": 1600,
+      "extraction_index": 64,
+      "timestamp": 64.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001600.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "d7a13f50-e5ac-4285-9299-24cacfcfece6",
+      "frame_index": 1625,
+      "extraction_index": 65,
+      "timestamp": 65.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001625.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "8326c8be-ce04-43c4-a46f-41de95bf1b9f",
+      "frame_index": 1650,
+      "extraction_index": 66,
+      "timestamp": 66.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001650.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "90d34c42-c847-4858-98a5-369861f304a3",
+      "frame_index": 1675,
+      "extraction_index": 67,
+      "timestamp": 67.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001675.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "2e42c612-30c3-4473-bf2b-0517c782258d",
+      "frame_index": 1700,
+      "extraction_index": 68,
+      "timestamp": 68.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001700.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "8d46244d-c638-45ef-bc79-4a41ba556c0a",
+      "frame_index": 1725,
+      "extraction_index": 69,
+      "timestamp": 69.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001725.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "dd201990-dffe-4a2b-bdee-375ec86d839d",
+      "frame_index": 1750,
+      "extraction_index": 70,
+      "timestamp": 70.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001750.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "bfddb135-9ec3-4987-87af-8751d3aae04a",
+      "frame_index": 1775,
+      "extraction_index": 71,
+      "timestamp": 71.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001775.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "5e2b3b95-5327-4631-b495-1ef1a3553e57",
+      "frame_index": 1800,
+      "extraction_index": 72,
+      "timestamp": 72.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001800.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "eba75fd1-df69-40bb-8009-7666deacbeba",
+      "frame_index": 1825,
+      "extraction_index": 73,
+      "timestamp": 73.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001825.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "69f75537-ceb1-4340-a277-766e156e90b9",
+      "frame_index": 1850,
+      "extraction_index": 74,
+      "timestamp": 74.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001850.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "243cacd4-51d2-4e7a-bc47-c55658091838",
+      "frame_index": 1875,
+      "extraction_index": 75,
+      "timestamp": 75.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001875.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "355a0ca2-94c9-4373-b1a2-e25fd1fc9a94",
+      "frame_index": 1900,
+      "extraction_index": 76,
+      "timestamp": 76.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001900.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "560be807-d2c8-4932-b2da-8051803c7764",
+      "frame_index": 1925,
+      "extraction_index": 77,
+      "timestamp": 77.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001925.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "74a9a76d-fb9e-4b7d-b71d-2c9a8ff72a9b",
+      "frame_index": 1950,
+      "extraction_index": 78,
+      "timestamp": 78.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001950.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "a29d0120-5a8b-4a15-829a-31c9a7e6ee01",
+      "frame_index": 1975,
+      "extraction_index": 79,
+      "timestamp": 79.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_001975.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "c1798ed3-7208-4e39-9847-74247867059a",
+      "frame_index": 2000,
+      "extraction_index": 80,
+      "timestamp": 80.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002000.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "77477282-b571-4dcb-ad01-097a87def633",
+      "frame_index": 2025,
+      "extraction_index": 81,
+      "timestamp": 81.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002025.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "926eb638-fdf0-4d09-a250-f861f3a38858",
+      "frame_index": 2050,
+      "extraction_index": 82,
+      "timestamp": 82.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002050.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "adb2b794-0f01-4c55-9f6d-68dc9de1fbc2",
+      "frame_index": 2075,
+      "extraction_index": 83,
+      "timestamp": 83.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002075.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "e8f1b566-11ed-4d09-822b-b477a2a94610",
+      "frame_index": 2100,
+      "extraction_index": 84,
+      "timestamp": 84.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002100.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "9bfc7eed-47f3-4d94-8794-fbd4b7314833",
+      "frame_index": 2125,
+      "extraction_index": 85,
+      "timestamp": 85.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002125.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "2a8d8e33-4c89-4661-8964-85944122be74",
+      "frame_index": 2150,
+      "extraction_index": 86,
+      "timestamp": 86.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002150.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "8f71e268-9b42-4590-8ed1-ea82835c1507",
+      "frame_index": 2175,
+      "extraction_index": 87,
+      "timestamp": 87.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002175.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "70a588c4-cc1f-4e42-a155-91075f598d72",
+      "frame_index": 2200,
+      "extraction_index": 88,
+      "timestamp": 88.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002200.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "a3bd9d49-74dc-47e3-9f13-6e46555da3b4",
+      "frame_index": 2225,
+      "extraction_index": 89,
+      "timestamp": 89.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002225.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "c1940bd1-f99a-4009-89ca-eb96f338bccd",
+      "frame_index": 2250,
+      "extraction_index": 90,
+      "timestamp": 90.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002250.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "778bcac8-8cbb-409d-b5b2-c0d76109e0db",
+      "frame_index": 2275,
+      "extraction_index": 91,
+      "timestamp": 91.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002275.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "d0ad95c1-807b-4f3c-b1d4-fea2cb706d20",
+      "frame_index": 2300,
+      "extraction_index": 92,
+      "timestamp": 92.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002300.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "78d69937-9383-49d9-b6be-e0028e211fa0",
+      "frame_index": 2325,
+      "extraction_index": 93,
+      "timestamp": 93.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002325.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "e66a5d91-5ec8-41b8-8007-6364faa21f2e",
+      "frame_index": 2350,
+      "extraction_index": 94,
+      "timestamp": 94.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002350.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "2e260f4b-6502-406b-87bf-b4a68bba8975",
+      "frame_index": 2375,
+      "extraction_index": 95,
+      "timestamp": 95.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002375.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "f769f7a5-75ee-469a-99d4-ac1025fbcb28",
+      "frame_index": 2400,
+      "extraction_index": 96,
+      "timestamp": 96.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002400.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "4a0d284c-8a30-4248-ae91-b58ac2d8e367",
+      "frame_index": 2425,
+      "extraction_index": 97,
+      "timestamp": 97.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002425.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "3909b1c8-68a3-4240-a0e0-05b212f37808",
+      "frame_index": 2450,
+      "extraction_index": 98,
+      "timestamp": 98.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002450.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "ec5fae57-1b23-49ee-8878-d686eeb27f86",
+      "frame_index": 2475,
+      "extraction_index": 99,
+      "timestamp": 99.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002475.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "1587298f-ad44-432f-8425-4ad31670d550",
+      "frame_index": 2500,
+      "extraction_index": 100,
+      "timestamp": 100.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002500.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "f818c7f4-d21e-450a-91a1-8b2bd5a22716",
+      "frame_index": 2525,
+      "extraction_index": 101,
+      "timestamp": 101.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002525.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "89c65c5e-dd03-481a-a0ac-4edc773f92d6",
+      "frame_index": 2550,
+      "extraction_index": 102,
+      "timestamp": 102.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002550.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "f645dddd-c049-434d-a303-0e9fa488440d",
+      "frame_index": 2575,
+      "extraction_index": 103,
+      "timestamp": 103.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002575.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "b72385fd-46c1-479f-b78f-5a51e682e5fd",
+      "frame_index": 2600,
+      "extraction_index": 104,
+      "timestamp": 104.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002600.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "1e32a6cc-7278-4b21-ae1d-76e2bb10f91c",
+      "frame_index": 2625,
+      "extraction_index": 105,
+      "timestamp": 105.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002625.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "612f6b83-6526-4e41-8189-441fadc7a6e0",
+      "frame_index": 2650,
+      "extraction_index": 106,
+      "timestamp": 106.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002650.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "d7555a77-fe50-488d-89f3-eb3d5bb54cb7",
+      "frame_index": 2675,
+      "extraction_index": 107,
+      "timestamp": 107.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002675.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "08c0c66d-120f-44c5-8f1c-d41d60de9065",
+      "frame_index": 2700,
+      "extraction_index": 108,
+      "timestamp": 108.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002700.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "a9579406-9f12-44fc-9003-8f633326cc1c",
+      "frame_index": 2725,
+      "extraction_index": 109,
+      "timestamp": 109.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002725.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "835fde1f-4545-41bc-9892-6e66f107cca1",
+      "frame_index": 2750,
+      "extraction_index": 110,
+      "timestamp": 110.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002750.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "97f005bd-4ea9-4e5f-9f30-6f5e22cdbb56",
+      "frame_index": 2775,
+      "extraction_index": 111,
+      "timestamp": 111.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002775.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "fcf2e958-4339-4897-878c-7deb37b97061",
+      "frame_index": 2800,
+      "extraction_index": 112,
+      "timestamp": 112.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002800.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "8db140b7-156f-4f27-8474-44cc0f124e18",
+      "frame_index": 2825,
+      "extraction_index": 113,
+      "timestamp": 113.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002825.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "db537b15-0acf-4c3b-93f1-ddf9f35b87c6",
+      "frame_index": 2850,
+      "extraction_index": 114,
+      "timestamp": 114.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002850.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "21076120-cf36-4954-8216-b5dc19a62b04",
+      "frame_index": 2875,
+      "extraction_index": 115,
+      "timestamp": 115.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002875.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "b8377a48-7549-4dee-931f-5fa4e431cda0",
+      "frame_index": 2900,
+      "extraction_index": 116,
+      "timestamp": 116.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002900.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "8c67a7a5-2c19-487b-a14e-2c817a908bfd",
+      "frame_index": 2925,
+      "extraction_index": 117,
+      "timestamp": 117.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002925.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "cfbac09d-20ce-4415-bb59-7ab037923a1e",
+      "frame_index": 2950,
+      "extraction_index": 118,
+      "timestamp": 118.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002950.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "4e5807af-f955-47af-9b07-016e04e85127",
+      "frame_index": 2975,
+      "extraction_index": 119,
+      "timestamp": 119.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_002975.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "2b431ef1-3977-4179-a66b-25440cf925b0",
+      "frame_index": 3000,
+      "extraction_index": 120,
+      "timestamp": 120.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003000.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "4a14e218-dae9-4fe8-a7c3-247cbb525e63",
+      "frame_index": 3025,
+      "extraction_index": 121,
+      "timestamp": 121.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003025.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "b7d9fc70-7be4-4ba3-878b-248fd617c918",
+      "frame_index": 3050,
+      "extraction_index": 122,
+      "timestamp": 122.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003050.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "3d958c4b-370b-4193-8227-8c4a8673fef8",
+      "frame_index": 3075,
+      "extraction_index": 123,
+      "timestamp": 123.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003075.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "26d85eab-d273-435d-9d6d-308e03817907",
+      "frame_index": 3100,
+      "extraction_index": 124,
+      "timestamp": 124.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003100.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "1fd22f4d-6466-4bbc-8a56-1cbfd98cbacf",
+      "frame_index": 3125,
+      "extraction_index": 125,
+      "timestamp": 125.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003125.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "b54b7595-ee11-4ab8-bc5b-ec8f8fad9244",
+      "frame_index": 3150,
+      "extraction_index": 126,
+      "timestamp": 126.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003150.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "633e16d5-7518-40e0-9d78-c6d5e908652d",
+      "frame_index": 3175,
+      "extraction_index": 127,
+      "timestamp": 127.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003175.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "66a998d7-93a4-4c10-9849-c6117f68df86",
+      "frame_index": 3200,
+      "extraction_index": 128,
+      "timestamp": 128.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003200.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "ffdca50e-a30c-4c7e-91c6-71a618e68592",
+      "frame_index": 3225,
+      "extraction_index": 129,
+      "timestamp": 129.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003225.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "3399d82e-657b-4933-82b8-90fa6a511fee",
+      "frame_index": 3250,
+      "extraction_index": 130,
+      "timestamp": 130.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003250.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "ed648243-aa22-40f0-b899-95bafc4728f5",
+      "frame_index": 3275,
+      "extraction_index": 131,
+      "timestamp": 131.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003275.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "d5c6ccd3-3097-4ff9-b904-38c84e39ae29",
+      "frame_index": 3300,
+      "extraction_index": 132,
+      "timestamp": 132.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003300.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "ffd7ae73-8163-40fe-90d7-f6602d31d4be",
+      "frame_index": 3325,
+      "extraction_index": 133,
+      "timestamp": 133.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003325.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "127dff69-d76e-4ec7-9579-bac06d590d89",
+      "frame_index": 3350,
+      "extraction_index": 134,
+      "timestamp": 134.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003350.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "0a198ee4-d441-4bac-b1c6-78871cae4d6e",
+      "frame_index": 3375,
+      "extraction_index": 135,
+      "timestamp": 135.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003375.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "88dcda77-a014-4fb9-9412-df10da4992fd",
+      "frame_index": 3400,
+      "extraction_index": 136,
+      "timestamp": 136.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003400.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "af203ca9-5e78-4362-8843-bbfffb7f0ff3",
+      "frame_index": 3425,
+      "extraction_index": 137,
+      "timestamp": 137.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003425.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "85e28ed2-d865-4e91-9aab-d34ab5005c0a",
+      "frame_index": 3450,
+      "extraction_index": 138,
+      "timestamp": 138.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003450.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "fc79374a-0b62-420e-86b4-7fbbe512fe19",
+      "frame_index": 3475,
+      "extraction_index": 139,
+      "timestamp": 139.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003475.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "933fc241-e37c-4e21-9e67-8ff698e704ea",
+      "frame_index": 3500,
+      "extraction_index": 140,
+      "timestamp": 140.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003500.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "63f96228-ce24-4fed-b334-daaf17bfcfb9",
+      "frame_index": 3525,
+      "extraction_index": 141,
+      "timestamp": 141.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003525.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "5d5281d3-208b-4303-8a5d-13fcaa2f6133",
+      "frame_index": 3550,
+      "extraction_index": 142,
+      "timestamp": 142.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003550.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "6cfaf79c-9211-4b0b-a97d-9fcc59085643",
+      "frame_index": 3575,
+      "extraction_index": 143,
+      "timestamp": 143.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003575.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "d5246013-aae4-43af-a9dd-12aa9f5446a0",
+      "frame_index": 3600,
+      "extraction_index": 144,
+      "timestamp": 144.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003600.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "de7923b0-df7b-4ebb-93c0-21b8315dbdca",
+      "frame_index": 3625,
+      "extraction_index": 145,
+      "timestamp": 145.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003625.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "d7594341-48cf-4ae7-995c-05be5d5d2acd",
+      "frame_index": 3650,
+      "extraction_index": 146,
+      "timestamp": 146.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003650.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "9c1d65b9-8654-4bc2-ba2c-4a0fb90098ce",
+      "frame_index": 3675,
+      "extraction_index": 147,
+      "timestamp": 147.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003675.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "2607b5a6-84d1-487e-b827-f7b504de6478",
+      "frame_index": 3700,
+      "extraction_index": 148,
+      "timestamp": 148.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003700.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "ef325bbc-9119-452a-b4b4-7a4ca87a7815",
+      "frame_index": 3725,
+      "extraction_index": 149,
+      "timestamp": 149.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003725.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "d10193ac-7196-4737-987a-e7d7c104d39a",
+      "frame_index": 3750,
+      "extraction_index": 150,
+      "timestamp": 150.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003750.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "52ee1ac5-e0e7-4010-91eb-6b7a3f536e6c",
+      "frame_index": 3775,
+      "extraction_index": 151,
+      "timestamp": 151.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003775.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "c88476a0-d376-46f9-9829-f826da843f14",
+      "frame_index": 3800,
+      "extraction_index": 152,
+      "timestamp": 152.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003800.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "b537e249-52bc-4266-9b06-1425904ca5d8",
+      "frame_index": 3825,
+      "extraction_index": 153,
+      "timestamp": 153.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003825.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "b3307f34-c653-4a8e-b627-f8cbfbfc57da",
+      "frame_index": 3850,
+      "extraction_index": 154,
+      "timestamp": 154.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003850.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "9cfe8f43-873a-4549-9d14-2628d47f5a9e",
+      "frame_index": 3875,
+      "extraction_index": 155,
+      "timestamp": 155.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003875.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "07ce133c-3e98-486c-aafd-8f07f6b6a969",
+      "frame_index": 3900,
+      "extraction_index": 156,
+      "timestamp": 156.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003900.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "7f420014-7aff-486d-8e10-fb74a2771645",
+      "frame_index": 3925,
+      "extraction_index": 157,
+      "timestamp": 157.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003925.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "591cf297-3d49-4aee-bb93-83ba774d22e8",
+      "frame_index": 3950,
+      "extraction_index": 158,
+      "timestamp": 158.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003950.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "32f5e958-1ac6-49d9-8f97-4dec49ef88f5",
+      "frame_index": 3975,
+      "extraction_index": 159,
+      "timestamp": 159.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_003975.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "ac2ccc01-1459-4b9b-bff2-ec7654840cc4",
+      "frame_index": 4000,
+      "extraction_index": 160,
+      "timestamp": 160.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_004000.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "1614ec97-6d0f-440e-b9cc-f48791c85cbd",
+      "frame_index": 4025,
+      "extraction_index": 161,
+      "timestamp": 161.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_004025.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "b725c76a-b424-491d-b078-5e930d5e2b05",
+      "frame_index": 4050,
+      "extraction_index": 162,
+      "timestamp": 162.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_004050.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "612be238-a772-455a-bad7-a251bc568942",
+      "frame_index": 4075,
+      "extraction_index": 163,
+      "timestamp": 163.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_004075.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "61d9af95-4b9e-43a9-92f6-864de886932b",
+      "frame_index": 4100,
+      "extraction_index": 164,
+      "timestamp": 164.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_004100.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "dca911b7-6d54-4a65-946d-d1afdea341e1",
+      "frame_index": 4125,
+      "extraction_index": 165,
+      "timestamp": 165.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_004125.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "5b43a8e7-3d52-4bbc-adfd-8c7778d8ae81",
+      "frame_index": 4150,
+      "extraction_index": 166,
+      "timestamp": 166.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_004150.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "4648e032-2645-4818-b268-6e94b0f61b28",
+      "frame_index": 4175,
+      "extraction_index": 167,
+      "timestamp": 167.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_004175.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "1b7f7078-26c6-4bcb-8705-535eedb0ad62",
+      "frame_index": 4200,
+      "extraction_index": 168,
+      "timestamp": 168.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_004200.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "742435b0-5e52-4ada-89d6-9aeb27269556",
+      "frame_index": 4225,
+      "extraction_index": 169,
+      "timestamp": 169.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_004225.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "d9b20f54-39c8-440d-8d28-24cbc3ee2095",
+      "frame_index": 4250,
+      "extraction_index": 170,
+      "timestamp": 170.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_004250.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "e8eaa7ea-d97c-4ba7-8ab7-4bc019c78a70",
+      "frame_index": 4275,
+      "extraction_index": 171,
+      "timestamp": 171.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_004275.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "de422164-f7ed-4129-8185-bd6bf68e8e48",
+      "frame_index": 4300,
+      "extraction_index": 172,
+      "timestamp": 172.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_004300.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "12e43104-e5ff-4026-a342-9f82f3f44843",
+      "frame_index": 4325,
+      "extraction_index": 173,
+      "timestamp": 173.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_004325.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "949e0bf0-bdab-40b7-a508-9c93c24ab470",
+      "frame_index": 4350,
+      "extraction_index": 174,
+      "timestamp": 174.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_004350.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "792fa3da-615b-42a5-8cac-d41898dd0f9a",
+      "frame_index": 4375,
+      "extraction_index": 175,
+      "timestamp": 175.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_004375.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    },
+    {
+      "frame_id": "1360d29a-4b31-4b14-9e61-1f366c29c68e",
+      "frame_index": 4400,
+      "extraction_index": 176,
+      "timestamp": 176.0,
+      "path": "surveillance_storage\\frames\\bf2b6d11-f978-4597-b590-cd95e894d48b\\frame_004400.jpg",
+      "width": 636,
+      "height": 360,
+      "session_id": "bf2b6d11-f978-4597-b590-cd95e894d48b",
+      "metadata": {
+        "source_video": "M:\\Order_to_PC\\MVP\\GOD'S_EYE\\input\\videoplayback.mp4",
+        "extraction_mode": "interval",
+        "quality": 85
+      }
+    }
+  ],
+  "total_frames_extracted": 177,
+  "fps": 25.0,
+  "duration": 176.24
+}

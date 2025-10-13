@@ -83,7 +83,7 @@ class ObjectDetectionNode:
     RETURN_TYPES = ("DETECTIONS", "DETECTION_METADATA")
     RETURN_NAMES = ("detections", "detection_metadata")
     FUNCTION = "detect_objects"
-    CATEGORY = "Surveillance/Detection"
+    CATEGORY = "Surveillance"
     
     def _check_cuda(self) -> bool:
         """Check if CUDA is available"""
