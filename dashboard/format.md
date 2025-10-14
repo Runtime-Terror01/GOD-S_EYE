@@ -96,6 +96,37 @@ surveillance_storage/
   "generated_at": "2025-10-14T09:30:00+05:30"
 }
 ```
+## vlm_alert.json
+```
+{
+  "session_id": "b628d100",
+  "alerts": [
+    {
+      "alert_id": "alert_0000",
+      "timestamp_sec": 0.0,
+      "frame_ref": "time_00:00:00 - 00:00:08",
+      "reason": "suspicious_activity",
+      "evidence": {
+        "flagged_items": "Military vehicles, Improvised Explosive Device (IED), small arms fire, Rocket Propelled Grenade (RPG), armed combatants.",
+        "event_description": "TIMESTAMP: 00:00:00 - 00:00:08\nOBSERVATIONS: An aerial view shows a convoy of at least three military-style trucks driving on a winding dirt road through a dense forest."
+      },
+      "severity": "Critical"
+    },
+    {
+      "alert_id": "alert_0001",
+      "timestamp_sec": 9.0,
+      "frame_ref": "time_00:00:09 - 00:00:12",
+      "reason": "suspicious_activity",
+      "evidence": {
+        "flagged_items": "None.",
+        "event_description": "TIMESTAMP: 00:00:09 - 00:00:12\nOBSERVATIONS: The scene shifts to a government building with an Indian flag."
+      },
+      "severity": "Critical"
+    }
+  ]
+}
+```
+
 
 ## Dashboard backend (Flask / FastAPI) — minimal spec
 
