@@ -1,0 +1,115 @@
+{
+  "pipeline_name": "surveillance_basic",
+  "description": "Basic surveillance pipeline processing all frames",
+  "version": "1.0",
+  "nodes": [
+    {
+      "node_id": "load_video",
+      "node_type": "LoadVideo",
+      "config": {
+        "video_path": "input/sample_video.mp4"
+      },
+      "outputs": ["video"]
+    },
+    {
+      "node_id": "extract_frames",
+      "node_type": "FrameExtractorNode",
+      "inputs": {
+        "video_path": "load_video.video",
+        "output_dir": "surveillance_storage",
+        "stride": 1
+      },
+      "config": {
+        "session_id": null
+      },
+      "outputs": ["frames_batch", "frame_meta_batch"]
+    },
+    {
+      "node_id": "detect_objects",
+      "node_type": "ObjectDetectionNode",
+      "inputs": {
+        "frames": "extract_frames.frames_batch",
+        "frames_meta": "extract_frames.frame_meta_batch"
+      },
+      "config": {
+        "model_path": "yolov8n.pt",
+        "conf_threshold": 0.5
+      },
+      "outputs": ["class_batch", "bbox_batch", "conf_batch"]
+    },
+    {
+      "node_id": "track_objects",
+      "node_type": "TrackingNode",
+      "inputs": {
+        "class_batch": "detect_objects.class_batch",
+        "bbox_batch": "detect_objects.bbox_batch",
+        "conf_batch": "detect_objects.conf_batch",
+        "frames_meta": "extract_frames.frame_meta_batch"
+      },
+      "config": {
+        "track_thresh": 0.5,
+        "track_buffer": 30,
+        "iou_threshold": 0.3,
+        "max_age": 30
+      },
+      "outputs": ["tracks_batch"]
+    },
+    {
+      "node_id": "generate_alerts",
+      "node_type": "AlertNode",
+      "inputs": {
+        "class_batch": "detect_objects.class_batch",
+        "bbox_batch": "detect_objects.bbox_batch",
+        "conf_batch": "detect_objects.conf_batch",
+        "tracks_batch": "track_objects.tracks_batch",
+        "frames_meta": "extract_frames.frame_meta_batch"
+      },
+      "config": {
+        "rules": {
+          "loitering": {
+            "enabled": true,
+            "duration_threshold": 30.0,
+            "severity": "Medium"
+          },
+          "suspicious_object": {
+            "enabled": true,
+            "watchlist": ["knife", "gun", "rifle", "pistol", "weapon"],
+            "conf_threshold": 0.5,
+            "severity": "Critical"
+          },
+          "crowding": {
+            "enabled": true,
+            "person_threshold": 10,
+            "severity": "Medium"
+          }
+        }
+      },
+      "outputs": ["alerts"]
+    },
+    {
+      "node_id": "vlm_report",
+      "node_type": "VLMNode",
+      "inputs": {
+        "video_path": "load_video.video",
+        "system_instruction": null,
+        "user_query": null
+      },
+      "config": {
+        "session_id": "extract_frames.session_id"
+      },
+      "outputs": ["report"]
+    }
+  ],
+  "execution_order": [
+    "load_video",
+    "extract_frames",
+    "detect_objects",
+    "track_objects",
+    "generate_alerts",
+    "vlm_report"
+  ],
+  "metadata_save_config": {
+    "save_after_each_node": true,
+    "output_dir": "surveillance_storage"
+  }
+}

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surveillance Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        h1 {
+            color: #60a5fa;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .panel {
+            background: #1e293b;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #334155;
+        }
+
+        .panel-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #60a5fa;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .session-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .session-item {
+            padding: 12px;
+            margin-bottom: 8px;
+            background: #0f172a;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .session-item:hover {
+            border-color: #3b82f6;
+            background: #1e293b;
+        }
+
+        .session-item.active {
+            border-color: #3b82f6;
+            background: #1e293b;
+        }
+
+        .session-id {
+            font-weight: 600;
+            color: #60a5fa;
+            margin-bottom: 4px;
+        }
+
+        .session-info {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        .viewer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .frame-viewer {
+            background: #0f172a;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .frame-viewer img {
+            max-width: 100%;
+            border-radius: 6px;
+            border: 2px solid #334155;
+        }
+
+        .frame-controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+
+        .btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: #2563eb;
+        }
+
+        .btn:disabled {
+            background: #475569;
+            cursor: not-allowed;
+        }
+
+        .alerts-panel {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .alert-item {
+            padding: 12px;
+            margin-bottom: 8px;
+            background: #0f172a;
+            border-radius: 6px;
+            border-left: 4px solid #ef4444;
+        }
+
+        .alert-item.severity-Critical {
+            border-left-color: #dc2626;
+            background: rgba(220, 38, 38, 0.1);
+        }
+
+        .alert-item.severity-High {
+            border-left-color: #f59e0b;
+            background: rgba(245, 158, 11, 0.1);
+        }
+
+        .alert-item.severity-Medium {
+            border-left-color: #eab308;
+            background: rgba(234, 179, 8, 0.1);
+        }
+
+        .alert-item.severity-Low {
+            border-left-color: #3b82f6;
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .alert-reason {
+            font-weight: 600;
+            color: #f87171;
+            margin-bottom: 4px;
+        }
+
+        .alert-time {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        .search-panel {
+            margin-top: 20px;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 12px;
+            background: #0f172a;
+            border: 2px solid #334155;
+            border-radius: 6px;
+            color: #e2e8f0;
+            font-size: 14px;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+
+        .search-results {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .search-result {
+            padding: 15px;
+            margin-bottom: 10px;
+            background: #0f172a;
+            border-radius: 6px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .result-session {
+            font-weight: 600;
+            color: #60a5fa;
+            margin-bottom: 8px;
+        }
+
+        .result-snippet {
+            color: #cbd5e1;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #94a3b8;
+        }
+
+        .error {
+            padding: 15px;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid #ef4444;
+            border-radius: 6px;
+            color: #fca5a5;
+            margin-bottom: 15px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #64748b;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .stat-card {
+            background: #0f172a;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #60a5fa;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #94a3b8;
+            text-transform: uppercase;
+        }
+
+        .report-summary {
+            background: #0f172a;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        .risk-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .risk-Critical { background: #dc2626; color: white; }
+        .risk-High { background: #f59e0b; color: white; }
+        .risk-Medium { background: #eab308; color: white; }
+        .risk-Low { background: #3b82f6; color: white; }
+        .risk-None { background: #10b981; color: white; }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔒 Surveillance Dashboard</h1>
+            <p class="subtitle">Real-time monitoring and analysis system</p>
+        </header>
+
+        <div class="dashboard-grid">
+            <!-- Session List Panel -->
+            <div class="panel">
+                <div class="panel-title">
+                    📂 Sessions
+                    <span id="sessionCount" style="margin-left: auto; font-size: 14px; color: #94a3b8;"></span>
+                </div>
+                <div id="sessionList" class="session-list">
+                    <div class="loading">Loading sessions...</div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div>
+                <div class="panel">
+                    <div class="panel-title">📊 Session Overview</div>
+                    <div id="sessionOverview">
+                        <div class="empty-state">
+                            Select a session to view details
+                        </div>
+                    </div>
+                </div>
+
+                <div class="viewer-grid" style="margin-top: 20px;">
+                    <!-- Frame Viewer -->
+                    <div class="panel">
+                        <div class="panel-title">🎥 Frame Viewer</div>
+                        <div class="frame-viewer" id="frameViewer">
+                            <div class="empty-state">No frame selected</div>
+                        </div>
+                    </div>
+
+                    <!-- Alerts Panel -->
+                    <div class="panel">
+                        <div class="panel-title">
+                            🚨 Alerts
+                            <span id="alertCount" style="margin-left: auto; font-size: 14px; color: #94a3b8;"></span>
+                        </div>
+                        <div id="alertsPanel" class="alerts-panel">
+                            <div class="empty-state">No alerts</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Panel -->
+                <div class="panel search-panel">
+                    <div class="panel-title">🔍 Semantic Search</div>
+                    <div class="search-box">
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search reports and session data...">
+                        <button class="btn" onclick="performSearch()">Search</button>
+                    </div>
+                    <div id="searchResults" class="search-results"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8000';
+        let currentSession = null;
+        let currentFrames = [];
+        let currentFrameIndex = 0;
+        let alertPollingInterval = null;
+
+        // Load sessions on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            loadSessions();
+            
+            // Enable search on Enter key
+            document.getElementById('searchInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') performSearch();
+            });
+        });
+
+        // Load all sessions
+        async function loadSessions() {
+            try {
+                const response = await fetch(`${API_BASE}/sessions`);
+                const sessions = await response.json();
+                
+                const sessionList = document.getElementById('sessionList');
+                document.getElementById('sessionCount').textContent = `${sessions.length} total`;
+                
+                if (sessions.length === 0) {
+                    sessionList.innerHTML = '<div class="empty-state">No sessions found</div>';
+                    return;
+                }
+                
+                sessionList.innerHTML = sessions.map(session => `
+                    <div class="session-item" onclick="selectSession('${session.session_id}')">
+                        <div class="session-id">${session.session_id}</div>
+                        <div class="session-info">${session.frame_count} frames • ${session.fps.toFixed(1)} fps</div>
+                        <div class="session-info">${new Date(session.started_at).toLocaleString()}</div>
+                    </div>
+                `).join('');
+            } catch (error) {
+                document.getElementById('sessionList').innerHTML = `
+                    <div class="error">Error loading sessions: ${error.message}</div>
+                `;
+            }
+        }
+
+        // Select a session
+        async function selectSession(sessionId) {
+            currentSession = sessionId;
+            
+            // Update active state
+            document.querySelectorAll('.session-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.closest('.session-item').classList.add('active');
+            
+            // Load session data
+            await Promise.all([
+                loadSessionOverview(sessionId),
+                loadFrames(sessionId),
+                loadAlerts(sessionId)
+            ]);
+            
+            // Start polling alerts
+            if (alertPollingInterval) clearInterval(alertPollingInterval);
+            alertPollingInterval = setInterval(() => loadAlerts(sessionId), 5000);
+        }
+
+        // Load session overview
+        async function loadSessionOverview(sessionId) {
+            try {
+                const [sessionResp, reportResp] = await Promise.all([
+                    fetch(`${API_BASE}/sessions/${sessionId}/frames?limit=1`),
+                    fetch(`${API_BASE}/sessions/${sessionId}/report`).catch(() => null)
+                ]);
+                
+                const sessionData = await sessionResp.json();
+                const report = reportResp ? await reportResp.json() : null;
+                
+                let html = `
+                    <div class="stats">
+                        <div class="stat-card">
+                            <div class="stat-value">${sessionData.total_frames}</div>
+                            <div class="stat-label">Total Frames</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="detectionCount">-</div>
+                            <div class="stat-label">Detections</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="trackCount">-</div>
+                            <div class="stat-label">Tracks</div>
+                        </div>
+                    </div>
+                `;
+                
+                if (report && report.summary_for_user) {
+                    const summary = report.summary_for_user;
+                    html += `
+                        <div class="report-summary">
+                            <span class="risk-badge risk-${summary.overall_risk_level}">${summary.overall_risk_level} Risk</span>
+                            <p style="color: #cbd5e1; margin-top: 10px;">${summary.justification}</p>
+                        </div>
+                    `;
+                }
+                
+                document.getElementById('sessionOverview').innerHTML = html;
+                
+                // Load detection and track counts
+                loadDetectionStats(sessionId);
+                loadTrackStats(sessionId);
+                
+            } catch (error) {
+                document.getElementById('sessionOverview').innerHTML = `
+                    <div class="error">Error loading overview: ${error.message}</div>
+                `;
+            }
+        }
+
+        // Load detection stats
+        async function loadDetectionStats(sessionId) {
+            try {
+                const response = await fetch(`${API_BASE}/sessions/${sessionId}/detections`);
+                const data = await response.json();
+                const count = Object.values(data.detections || {}).flat().length;
+                document.getElementById('detectionCount').textContent = count;
+            } catch (error) {
+                document.getElementById('detectionCount').textContent = 'N/A';
+            }
+        }
+
+        // Load track stats
+        async function loadTrackStats(sessionId) {
+            try {
+                const response = await fetch(`${API_BASE}/sessions/${sessionId}/tracks`);
+                const data = await response.json();
+                const tracks = new Set();
+                Object.values(data.tracks || {}).flat().forEach(t => tracks.add(t.track_id));
+                document.getElementById('trackCount').textContent = tracks.size;
+            } catch (error) {
+                document.getElementById('trackCount').textContent = 'N/A';
+            }
+        }
+
+        // Load frames for session
+        async function loadFrames(sessionId) {
+            try {
+                const response = await fetch(`${API_BASE}/sessions/${sessionId}/frames?limit=100`);
+                const data = await response.json();
+                currentFrames = data.frames || [];
+                currentFrameIndex = 0;
+                
+                if (currentFrames.length > 0) {
+                    displayFrame(0);
+                }
+            } catch (error) {
+                console.error('Error loading frames:', error);
+            }
+        }
+
+        // Display frame
+        function displayFrame(index) {
+            if (index < 0 || index >= currentFrames.length) return;
+            
+            currentFrameIndex = index;
+            const frame = currentFrames[index];
+            
+            const viewer = document.getElementById('frameViewer');
+            viewer.innerHTML = `
+                <img src="${API_BASE}/sessions/${currentSession}/frames/${frame.frame_id}" 
+                     alt="Frame ${frame.frame_index}">
+                <div style="margin-top: 10px; color: #94a3b8; font-size: 14px;">
+                    Frame ${frame.frame_index} • ${frame.timestamp_sec.toFixed(2)}s
+                </div>
+                <div class="frame-controls">
+                    <button class="btn" onclick="displayFrame(${index - 1})" ${index === 0 ? 'disabled' : ''}>
+                        ← Previous
+                    </button>
+                    <button class="btn" onclick="displayFrame(${index + 1})" ${index === currentFrames.length - 1 ? 'disabled' : ''}>
+                        Next →
+                    </button>
+                </div>
+            `;
+        }
+
+        // Load alerts
+        async function loadAlerts(sessionId) {
+            try {
+                const response = await fetch(`${API_BASE}/sessions/${sessionId}/alerts`);
+                const data = await response.json();
+                const alerts = data.alerts || [];
+                
+                document.getElementById('alertCount').textContent = `${alerts.length} alerts`;
+                
+                const alertsPanel = document.getElementById('alertsPanel');
+                
+                if (alerts.length === 0) {
+                    alertsPanel.innerHTML = '<div class="empty-state">No alerts detected</div>';
+                    return;
+                }
+                
+                alertsPanel.innerHTML = alerts.map(alert => `
+                    <div class="alert-item severity-${alert.severity}">
+                        <div class="alert-reason">${alert.reason.replace(/_/g, ' ').toUpperCase()}</div>
+                        <div class="alert-time">
+                            ${alert.timestamp_sec.toFixed(2)}s • ${alert.severity} severity
+                        </div>
+                        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">
+                            ${JSON.stringify(alert.evidence)}
+                        </div>
+                    </div>
+                `).join('');
+                
+            } catch (error) {
+                console.error('Error loading alerts:', error);
+            }
+        }
+
+        // Perform search
+        async function performSearch() {
+            const query = document.getElementById('searchInput').value.trim();
+            if (!query) return;
+            
+            const resultsDiv = document.getElementById('searchResults');
+            resultsDiv.innerHTML = '<div class="loading">Searching...</div>';
+            
+            try {
+                const response = await fetch(`${API_BASE}/search`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query, limit: 10 })
+                });
+                
+                const data = await response.json();
+                
+                if (data.results.length === 0) {
+                    resultsDiv.innerHTML = '<div class="empty-state">No results found</div>';
+                    return;
+                }
+                
+                resultsDiv.innerHTML = data.results.map(result => `
+                    <div class="search-result" onclick="selectSession('${result.session_id}')">
+                        <div class="result-session">
+                            Session: ${result.session_id}
+                            <span class="risk-badge risk-${result.risk_level}" style="margin-left: 10px; font-size: 11px;">
+                                ${result.risk_level}
+                            </span>
+                        </div>
+                        <div class="result-snippet">${result.snippet}</div>
+                        <div style="font-size: 12px; color: #64748b; margin-top: 8px;">
+                            ${new Date(result.generated_at).toLocaleString()}
+                        </div>
+                    </div>
+                `).join('');
+                
+            } catch (error) {
+                resultsDiv.innerHTML = `<div class="error">Search error: ${error.message}</div>`;
+            }
+        }
+    </script>
+</body>
+</html>

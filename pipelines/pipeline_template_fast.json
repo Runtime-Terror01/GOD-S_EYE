@@ -1,0 +1,125 @@
+{
+  "pipeline_name": "surveillance_fast",
+  "description": "Fast surveillance pipeline sampling every Nth frame",
+  "version": "1.0",
+  "nodes": [
+    {
+      "node_id": "load_video",
+      "node_type": "LoadVideo",
+      "config": {
+        "video_path": "input/sample_video.mp4"
+      },
+      "outputs": ["video"]
+    },
+    {
+      "node_id": "extract_frames",
+      "node_type": "FrameExtractorNode",
+      "inputs": {
+        "video_path": "load_video.video",
+        "output_dir": "surveillance_storage",
+        "stride": 5
+      },
+      "config": {
+        "session_id": null,
+        "note": "stride=5 means extract every 5th frame for faster processing"
+      },
+      "outputs": ["frames_batch", "frame_meta_batch"]
+    },
+    {
+      "node_id": "detect_objects",
+      "node_type": "ObjectDetectionNode",
+      "inputs": {
+        "frames": "extract_frames.frames_batch",
+        "frames_meta": "extract_frames.frame_meta_batch"
+      },
+      "config": {
+        "model_path": "yolov8n.pt",
+        "conf_threshold": 0.4
+      },
+      "outputs": ["class_batch", "bbox_batch", "conf_batch"]
+    },
+    {
+      "node_id": "track_objects",
+      "node_type": "TrackingNode",
+      "inputs": {
+        "class_batch": "detect_objects.class_batch",
+        "bbox_batch": "detect_objects.bbox_batch",
+        "conf_batch": "detect_objects.conf_batch",
+        "frames_meta": "extract_frames.frame_meta_batch"
+      },
+      "config": {
+        "track_thresh": 0.4,
+        "track_buffer": 60,
+        "iou_threshold": 0.35,
+        "max_age": 60,
+        "note": "Increased buffer and age for sparse frames"
+      },
+      "outputs": ["tracks_batch"]
+    },
+    {
+      "node_id": "generate_alerts",
+      "node_type": "AlertNode",
+      "inputs": {
+        "class_batch": "detect_objects.class_batch",
+        "bbox_batch": "detect_objects.bbox_batch",
+        "conf_batch": "detect_objects.conf_batch",
+        "tracks_batch": "track_objects.tracks_batch",
+        "frames_meta": "extract_frames.frame_meta_batch"
+      },
+      "config": {
+        "rules": {
+          "loitering": {
+            "enabled": true,
+            "duration_threshold": 45.0,
+            "severity": "Medium",
+            "note": "Increased threshold due to sparse sampling"
+          },
+          "suspicious_object": {
+            "enabled": true,
+            "watchlist": ["knife", "gun", "rifle", "pistol", "weapon"],
+            "conf_threshold": 0.6,
+            "severity": "Critical",
+            "note": "Higher confidence threshold for critical alerts"
+          },
+          "crowding": {
+            "enabled": true,
+            "person_threshold": 12,
+            "severity": "Medium"
+          }
+        }
+      },
+      "outputs": ["alerts"]
+    },
+    {
+      "node_id": "vlm_report",
+      "node_type": "VLMNode",
+      "inputs": {
+        "video_path": "load_video.video",
+        "system_instruction": null,
+        "user_query": null
+      },
+      "config": {
+        "session_id": "extract_frames.session_id",
+        "note": "VLM analyzes full video regardless of frame sampling"
+      },
+      "outputs": ["report"]
+    }
+  ],
+  "execution_order": [
+    "load_video",
+    "extract_frames",
+    "detect_objects",
+    "track_objects",
+    "generate_alerts",
+    "vlm_report"
+  ],
+  "metadata_save_config": {
+    "save_after_each_node": true,
+    "output_dir": "surveillance_storage"
+  },
+  "performance_notes": {
+    "expected_speedup": "5x faster than basic pipeline",
+    "tradeoffs": "May miss brief events between sampled frames",
+    "recommended_use": "Real-time monitoring or initial screening"
+  }
+}

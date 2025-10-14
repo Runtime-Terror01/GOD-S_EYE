@@ -1,0 +1,25 @@
+# Surveillance Platform Requirements
+
+# Core dependencies
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Object Detection
+ultralytics>=8.0.0
+
+# Dashboard Backend
+fastapi>=0.104.0
+uvicorn>=0.24.0
+python-multipart>=0.0.6
+
+# VLM Analysis (Optional)
+google-generativeai>=0.3.0
+
+# Tracking (Optional - ByteTrack)
+# Note: ByteTrack installation varies by system
+# See: https://github.com/ifzhang/ByteTrack
+# Alternative: System uses built-in IoU tracker as fallback
+
+# Development
+pytest>=7.4.0
+requests>=2.31.0
