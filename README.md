@@ -28,10 +28,10 @@ This system provides a **drag-and-drop node interface** to build custom video an
 ## 📸 Screenshots
 
 ### Pipeline Builder (Node-Based Interface)
-![Pipeline](screenshots\Pipeline.jpg)
+![Pipeline](screenshots/Pipeline.jpg)
 
 ### Surveillance Dashboard
-![Dashboard](screenshots\Dashboard.jpg)
+![Dashboard](screenshots/Dashboard.jpg)
 
 ---
 

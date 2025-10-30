@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Surveillance Control Center</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f0f0f; color: #e0e0e0; overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg,#1a1a1a 0%,#2a2a2a 100%);
+            border-bottom: 2px solid #333; padding: 0.8rem 2rem;
+            display:flex; justify-content:space-between; align-items:center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        .header h1 { font-size:1.4rem; font-weight:600; color:#fff; text-transform:uppercase; letter-spacing:1px; }
+        .header-controls { display:flex; align-items:center; gap:1rem; }
+        .status-indicator { display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; color:#ccc; }
+        .status-dot { width:8px; height:8px; background:#00ff00; border-radius:50%; animation:pulse 2s infinite; }
+        @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
+
+        .main-container {
+            display:grid; grid-template-columns:250px 1fr 320px;
+            height: calc(100vh - 60px); gap:0; background:#0f0f0f;
+        }
+
+        .sidebar { background:#1a1a1a; padding:1rem; border-right:1px solid #333; overflow-y:auto; }
+        .sidebar h3 { color:#fff; font-size:0.9rem; margin-bottom:1rem; text-transform:uppercase; letter-spacing:0.5px; }
+        .session-list { display:flex; flex-direction:column; gap:0.8rem; }
+        .session-item {
+            background:#2a2a2a; border-radius:4px; padding:0.8rem; border:1px solid #444; cursor:pointer;
+            transition: all .15s ease;
+        }
+        .session-item:hover { background:#333; border-color:#555; }
+        .session-item.active { background:#444; border-color:#00ff88; }
+        .session-id { font-size:0.85rem; color:#00ff88; font-weight:600; margin-bottom:0.3rem; }
+        .session-meta { font-size:0.7rem; color:#aaa; }
+
+        .center-panel { background:#1a1a1a; display:flex; flex-direction:column; }
+        .viewer-header { background:#2a2a2a; padding:0.8rem 1.5rem; border-bottom:1px solid #333; display:flex; justify-content:space-between; align-items:center; }
+        .viewer-title { font-size:1rem; color:#fff; font-weight:600; }
+        .session-info { font-size:0.85rem; color:#00ff88; }
+
+        .frame-viewer { flex:1; background:#000; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; }
+        .frame-viewer img { max-width:100%; max-height:100%; object-fit:contain; display:block; }
+        .frame-placeholder { color:#666; font-size:1.1rem; text-align:center; }
+
+        .frame-controls {
+            background:#2a2a2a; padding:0.8rem 1rem; border-top:1px solid #333; display:flex; justify-content:center; align-items:center; gap:0.8rem;
+        }
+        .frame-controls button {
+            background:#444; border:1px solid #666; color:#fff; padding:0.5rem 1rem; border-radius:4px; cursor:pointer; font-size:0.85rem; transition:background 0.2s;
+        }
+        .frame-controls button:hover:not(:disabled){ background:#555; }
+        .frame-controls button:disabled { opacity:0.5; cursor:not-allowed; }
+        .frame-controls input { width:80px; padding:0.5rem; background:#333; border:1px solid #666; color:#fff; text-align:center; border-radius:4px; }
+        .frame-info { font-size:0.8rem; color:#aaa; }
+
+        .right-panel { background:#1a1a1a; display:flex; flex-direction:column; border-left:1px solid #333; }
+        .panel-tabs { display:flex; background:#2a2a2a; border-bottom:1px solid #333; }
+        .tab { flex:1; padding:0.8rem 0.5rem; text-align:center; cursor:pointer; font-size:0.75rem; color:#aaa; border-right:1px solid #333; transition:all .15s; }
+        .tab:last-child { border-right:none; }
+        .tab.active { background:#444; color:#fff; }
+        .tab-content { flex:1; overflow-y:auto; }
+        .tab-panel { display:none; height:100%; }
+        .tab-panel.active { display:flex; flex-direction:column; }
+
+        .alerts-scroll { padding:1rem; overflow-y:auto; }
+        .alert-item { background:#2a2a2a; border-left:4px solid #ff6b6b; padding:0.8rem; margin-bottom:0.8rem; border-radius:0 4px 4px 0; }
+        .alert-item.critical { border-left-color:#ff3838; background:rgba(255,56,56,0.06); }
+        .alert-item.medium { border-left-color:#ffa726; background:rgba(255,167,38,0.04); }
+        .alert-header { display:flex; justify-content:space-between; margin-bottom:0.5rem; }
+        .alert-reason { font-weight:600; color:#fff; font-size:0.85rem; }
+        .alert-severity { padding:0.2rem 0.6rem; border-radius:3px; font-size:0.7rem; font-weight:700; text-transform:uppercase; color:#fff; }
+        .alert-severity.critical { background:#ff3838; }
+        .alert-severity.medium { background:#ffa726; color:#222; }
+        .alert-meta { font-size:0.75rem; color:#aaa; }
+
+        .face-grid { padding:1rem; display:grid; grid-template-columns:repeat(2,1fr); gap:0.8rem; }
+        .face-item { background:#2a2a2a; border-radius:4px; padding:0.8rem; text-align:center; border:1px solid #444; }
+        .face-item img { width:100%; height:80px; border-radius:4px; background:#444; margin-bottom:0.5rem; object-fit:cover; }
+        .face-item .name { font-size:0.75rem; color:#ff6b6b; font-weight:600; margin-bottom:0.2rem; }
+        .face-item .confidence { font-size:0.7rem; color:#aaa; }
+
+        .charts-scroll { padding:1rem; overflow-y:auto; }
+        .chart-container { background:#2a2a2a; border-radius:4px; padding:1rem; border:1px solid #444; }
+        .chart-container img { width:100%; height:auto; border-radius:4px; }
+
+        .chatbot-container { height:100%; display:flex; flex-direction:column; }
+        .chatbot-header { background:#2a2a2a; padding:0.8rem; border-bottom:1px solid #333; font-size:0.9rem; font-weight:600; color:#fff; }
+        .chatbot-messages { flex:1; padding:1rem; overflow-y:auto; display:flex; flex-direction:column; gap:0.8rem; }
+        .message { padding:0.8rem; border-radius:6px; max-width:85%; font-size:0.85rem; line-height:1.4; }
+        .message.user { background:#444; color:#fff; align-self:flex-end; margin-left:auto; }
+        .message.assistant { background:#2a2a2a; color:#e0e0e0; align-self:flex-start; border:1px solid #333; }
+        .chatbot-input { display:flex; gap:0.5rem; padding:1rem; border-top:1px solid #333; background:#1a1a1a; }
+        .chatbot-input input { flex:1; padding:0.6rem; background:#2a2a2a; border:1px solid #444; border-radius:4px; color:#fff; font-size:0.85rem; }
+        .chatbot-input button { padding:0.6rem 1rem; background:#444; border:1px solid #666; border-radius:4px; color:#fff; font-weight:600; cursor:pointer; transition:background .15s; }
+        .chatbot-input button:hover { background:#555; }
+        .no-data { text-align:center; color:#666; padding:2rem; font-size:0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Surveillance Control Center</h1>
+        <div class="header-controls">
+            <div class="status-indicator">
+                <div class="status-dot" id="statusDot"></div>
+                <span id="statusText">System Idle</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Available Sessions</h3>
+            <div class="session-list" id="sessionList">
+                <div class="no-data">Loading sessions...</div>
+            </div>
+        </div>
+
+        <div class="center-panel">
+            <div class="viewer-header">
+                <div class="viewer-title">Video Frame Viewer</div>
+                <div class="session-info" id="sessionInfo">No session selected</div>
+            </div>
+
+            <div class="frame-viewer" id="frameViewer">
+                <div class="frame-placeholder">Select a session to view frames</div>
+            </div>
+
+            <div class="frame-controls">
+                <button id="prevBtn" disabled>◄ Previous</button>
+                <button id="playBtn" disabled>▶ Play</button>
+                <button id="nextBtn" disabled>Next ►</button>
+                <input type="number" id="frameInput" value="0" min="0" disabled />
+                <div class="frame-info" id="frameInfo"></div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="panel-tabs" role="tablist">
+                <div class="tab active" data-tab="alerts">Alerts</div>
+                <div class="tab" data-tab="faces">Faces</div>
+                <div class="tab" data-tab="charts">Charts</div>
+                <div class="tab" data-tab="chat">Search</div>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-panel active" id="alerts-panel">
+                    <div class="alerts-scroll" id="alertsContainer">
+                        <div class="no-data">Select a session to view alerts</div>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="faces-panel">
+                    <div class="face-grid" id="facesContainer">
+                        <div class="no-data">Select a session to view detected faces</div>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="charts-panel">
+                    <div class="charts-scroll" id="chartsContainer">
+                        <div class="no-data">Select a session to view analytics</div>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="chat-panel">
+                    <div class="chatbot-container">
+                        <div class="chatbot-header">Intelligence Analysis Search</div>
+                        <div class="chatbot-messages" id="chatMessages"></div>
+                        <div class="chatbot-input">
+                            <input type="text" id="chatInput" placeholder="Ask about the footage..." />
+                            <button id="chatSendBtn">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function () {
+        // CONFIG
+        const API_BASE = 'http://localhost:8000';
+        // STATE
+        let sessions = [];
+        let currentSessionId = null;
+        let sessionData = null;
+        let totalFrames = 0;
+        let currentFrame = 0;
+        let isPlaying = false;
+        let playInterval = null;
+
+        // Utility: fuzzy keyword matching
+        function includesAny(text, keywords) {
+            if (!text) return false;
+            text = text.toLowerCase();
+            return keywords.some(k => text.includes(k.toLowerCase()));
+        }
+
+        // Utility: extract numbers from query (e.g., "how many people: 12?")
+        function extractNumber(text) {
+            const m = text.match(/(\d{1,6})/);
+            return m ? parseInt(m[1], 10) : null;
+        }
+
+        // Chat Q/A definitions. Each entry supports:
+        //  - keywords: array of strings to match
+        //  - answer: static string OR
+        //  - answerFn: function(query) => string that can access sessionData
+        const qaPairs = [
+            {
+                keywords: ['what kind', 'what is visible', 'activity visible', 'what kind of activity'],
+                answer: "The footage shows a military engagement, including movement of armed combatants, light tactical vehicles, and potential use of weapons such as small arms and RPGs. Check thumbnails for visible weapon signatures and vehicle silhouettes."
+            },
+            {
+                // count-related queries
+                keywords: ['how many', 'how many people', 'how many persons', 'people detected', 'person detected', 'count people', 'count persons'],
+                answerFn: (q) => {
+                    // if user included a number explicitly, echo / clarify
+                    const explicit = extractNumber(q);
+                    if (explicit !== null) {
+                        return `You mentioned ${explicit}. If you want a live count for this session, ask 'how many detected in this session' or select a session first.`;
+                    }
+
+                    // try to use sessionData fields (common names)
+                    if (sessionData) {
+                        if (typeof sessionData.person_count === 'number') {
+                            return `Found: ${sessionData.person_count}`;
+                        }
+                        // if sessionData contains detections array, count those
+                        if (Array.isArray(sessionData.detections)) {
+                            return `Found: ${sessionData.detections.length}`;
+                        }
+                        // some APIs return entities or objects
+                        if (Array.isArray(sessionData.objects)) {
+                            return `Found: ${sessionData.objects.length}`;
+                        }
+                    }
+
+                    // fallback example value (your requested placeholder)
+                    return 'Found: 34';
+                }
+            },
+            {
+                keywords: ['who should', 'handle', 'who handles', 'personnel'],
+                answer: "This footage should be handled only by authorized intelligence or military command personnel who have the necessary clearance and operational remit. Avoid distributing raw footage to standard security teams without authorization."
+            },
+            {
+                keywords: ['analysis', 'perform', 'assess', 'what to analyze', 'analysis requirements'],
+                answer: "Perform an intelligence-value assessment: identify unit movement, vehicle types, weapons signatures (e.g., RPG arcs), formation/tactical patterns, likely ingress/egress routes, timestamps of key events, and any unique markings. Correlate with other sensors and geospatial intelligence where possible."
+            },
+            {
+                keywords: ['document', 'record', 'how should', 'logging', 'logging format'],
+                answer: "Document for after-action review. Include exact timestamps, frame references, annotated screenshots, tracks of identified entities, estimated geolocation, and a concise narrative describing behaviors and likely intent."
+            },
+            {
+                keywords: ['archive', 'store', 'afterward', 'done with', 'where to store'],
+                answer: "Archive footage in a secure, access-controlled repository with classification labels and a retention schedule. Keep metadata (source, sensor, timestamps, operator) and restrict access to authorized analysts only."
+            },
+            {
+                keywords: ['weapons', 'identify weapons', 'what weapons', 'vehicles'],
+                answer: "Identifiable equipment includes small arms and crew-served weapons; some frames show signatures consistent with RPG use. Vehicle silhouettes suggest light tactical trucks and possibly APC-type vehicles — extract high-res stills for forensic ID."
+            },
+            {
+                keywords: ['suspicious', 'suspicious behavior', 'anomalous', 'unusual activity'],
+                answer: "Flag clusters near chokepoints, individuals changing formation, rapid movements, or unattended objects. Timestamp and prioritize those segments for analyst review."
+            },
+            {
+                keywords: ['next steps', 'recommend', 'what now', 'recommendation'],
+                answer: "Recommended next steps: (1) extract and secure key frames, (2) run watchlist matches (faces/vehicles), (3) cross-reference with other sensor feeds, (4) prepare a concise intel brief for commanders."
+            },
+            {
+                keywords: ['help', 'guide', 'what can you do', 'how to use'],
+                answer: "Ask questions about the activity, counts (e.g., 'how many people detected?'), handling procedures, analysis steps, documentation, or archival protocols. If a session is selected I can include live numbers from it."
+            }
+        ];
+
+        // DOM refs
+        const sessionListEl = document.getElementById('sessionList');
+        const sessionInfoEl = document.getElementById('sessionInfo');
+        const statusTextEl = document.getElementById('statusText');
+        const statusDotEl = document.getElementById('statusDot');
+
+        const frameViewerEl = document.getElementById('frameViewer');
+        const frameInputEl = document.getElementById('frameInput');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const playBtn = document.getElementById('playBtn');
+        const frameInfoEl = document.getElementById('frameInfo');
+
+        const alertsContainer = document.getElementById('alertsContainer');
+        const facesContainer = document.getElementById('facesContainer');
+        const chartsContainer = document.getElementById('chartsContainer');
+
+        const chatMessages = document.getElementById('chatMessages');
+        const chatInput = document.getElementById('chatInput');
+        const chatSendBtn = document.getElementById('chatSendBtn');
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            attachControls();
+            loadSessions();
+            attachTabHandlers();
+            setStatus('System Idle');
+            appendAssistantMessage("System ready. Select a session then ask me about the footage (e.g., 'How many people detected?').");
+        });
+
+        function setStatus(text, active = false) {
+            statusTextEl.textContent = text;
+            statusDotEl.style.background = active ? '#00ff00' : '#888';
+        }
+
+        async function loadSessions() {
+            sessionListEl.innerHTML = '<div class="no-data">Loading sessions...</div>';
+            try {
+                const res = await fetch(`${API_BASE}/api/sessions`);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const data = await res.json();
+                sessions = data.sessions || [];
+                renderSessionList();
+            } catch (err) {
+                console.error('Error loading sessions:', err);
+                sessionListEl.innerHTML = '<div class="no-data">Error loading sessions</div>';
+            }
+        }
+
+        function renderSessionList() {
+            if (!sessions || sessions.length === 0) {
+                sessionListEl.innerHTML = '<div class="no-data">No sessions found</div>';
+                return;
+            }
+            sessionListEl.innerHTML = '';
+            sessions.forEach(s => {
+                const el = document.createElement('div');
+                el.className = 'session-item';
+                el.dataset.sessionId = s.session_id;
+                el.innerHTML = `
+                    <div class="session-id">${s.session_id}</div>
+                    <div class="session-meta">Frames: ${s.metadata?.frame_count || 0} • FPS: ${s.metadata?.fps || 30}</div>
+                `;
+                el.addEventListener('click', () => selectSession(s.session_id));
+                sessionListEl.appendChild(el);
+            });
+        }
+
+        // Safe highlight
+        function highlightSession(sessionId) {
+            document.querySelectorAll('.session-item').forEach(it => {
+                it.classList.toggle('active', it.dataset.sessionId === sessionId);
+            });
+        }
+
+        async function selectSession(sessionId) {
+            if (!sessionId) return;
+            currentSessionId = sessionId;
+            highlightSession(sessionId);
+            sessionInfoEl.textContent = `Session: ${sessionId}`;
+            setStatus(`Active: ${sessionId}`, true);
+            try {
+                await loadSessionData(sessionId);
+            } catch (err) {
+                console.error('Error selecting session:', err);
+            }
+        }
+
+        async function loadSessionData(sessionId) {
+            try {
+                const res = await fetch(`${API_BASE}/api/session/${encodeURIComponent(sessionId)}`);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const json = await res.json();
+                sessionData = json;
+                // Normalize frames
+                totalFrames = (json.annotated_frame_count) || (json.session_metadata && json.session_metadata.frame_count) || 0;
+                currentFrame = 0;
+                enableFrameControls(true);
+                renderAlerts(json.alerts || []);
+                renderFaces(json.faces || json.detected_faces || []);
+                await loadVisualizations(sessionId);
+                await loadFrame(0);
+            } catch (err) {
+                console.error('Error loading session data:', err);
+                appendAssistantMessage('Failed to load session data. See console for details.');
+            }
+        }
+
+        function enableFrameControls(enabled) {
+            frameInputEl.disabled = !enabled;
+            prevBtn.disabled = !enabled;
+            nextBtn.disabled = !enabled;
+            playBtn.disabled = !enabled;
+            if (!enabled) {
+                frameInfoEl.textContent = '';
+                frameInputEl.value = 0;
+            }
+        }
+
+        async function loadFrame(frameIndex) {
+            if (!currentSessionId) return;
+            // clamp
+            if (frameIndex < 0) frameIndex = 0;
+            if (totalFrames > 0 && frameIndex > totalFrames - 1) frameIndex = totalFrames - 1;
+
+            const frameViewer = frameViewerEl;
+            const img = document.createElement('img');
+            img.alt = `Frame ${frameIndex}`;
+            img.style.maxWidth = '100%';
+            img.style.maxHeight = '100%';
+            img.style.objectFit = 'contain';
+
+            img.onload = () => {
+                frameViewer.innerHTML = '';
+                frameViewer.appendChild(img);
+            };
+            img.onerror = () => {
+                frameViewer.innerHTML = '<div class="frame-placeholder">Frame not available</div>';
+            };
+
+            // annotated=true by default for visual overlays
+            img.src = `${API_BASE}/api/session/${encodeURIComponent(currentSessionId)}/frame/${frameIndex}?annotated=true&t=${Date.now()}`;
+
+            currentFrame = frameIndex;
+            frameInputEl.value = frameIndex;
+
+            const fps = (sessionData && sessionData.session_metadata && sessionData.session_metadata.fps) || 30;
+            const timestamp = (fps > 0) ? (frameIndex / fps) : 0;
+            frameInfoEl.textContent = `Frame ${frameIndex} / ${Math.max(totalFrames - 1, 0)} • ${timestamp.toFixed(2)}s`;
+        }
+
+        // Controls
+        function attachControls() {
+            prevBtn.addEventListener('click', () => {
+                if (currentFrame > 0) loadFrame(currentFrame - 1);
+            });
+            nextBtn.addEventListener('click', () => {
+                if (currentFrame < totalFrames - 1) loadFrame(currentFrame + 1);
+            });
+            playBtn.addEventListener('click', togglePlayback);
+            frameInputEl.addEventListener('change', (e) => {
+                const val = parseInt(e.target.value, 10);
+                if (!isNaN(val) && val >= 0 && (totalFrames === 0 || val < totalFrames)) {
+                    loadFrame(val);
+                }
+            });
+
+            // chat
+            chatSendBtn.addEventListener('click', () => sendMessage());
+            chatInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') sendMessage();
+            });
+        }
+
+        function togglePlayback() {
+            if (isPlaying) {
+                clearInterval(playInterval);
+                playBtn.textContent = '▶ Play';
+                isPlaying = false;
+            } else {
+                if (totalFrames <= 0) return;
+                playBtn.textContent = '⏸ Pause';
+                isPlaying = true;
+                const fps = (sessionData && sessionData.session_metadata && sessionData.session_metadata.fps) || 10;
+                const intervalMs = Math.max(50, Math.round(1000 / fps));
+                playInterval = setInterval(() => {
+                    if (currentFrame < totalFrames - 1) {
+                        loadFrame(currentFrame + 1);
+                    } else {
+                        clearInterval(playInterval);
+                        playBtn.textContent = '▶ Play';
+                        isPlaying = false;
+                    }
+                }, intervalMs);
+            }
+        }
+
+        // Render helpers
+        function renderAlerts(alerts) {
+            if (!alerts || alerts.length === 0) {
+                alertsContainer.innerHTML = '<div class="no-data">No alerts in this session</div>';
+                return;
+            }
+            alertsContainer.innerHTML = '';
+            alerts.forEach(a => {
+                const div = document.createElement('div');
+                const severity = (a.severity || 'MEDIUM').toLowerCase();
+                div.className = 'alert-item ' + severity;
+                const ts = (typeof a.timestamp_sec === 'number') ? `${a.timestamp_sec.toFixed(1)}s` : '';
+                div.innerHTML = `
+                    <div class="alert-header">
+                        <div class="alert-reason">${escapeHtml(a.reason || 'Alert')}</div>
+                        <div class="alert-severity ${severity}">${escapeHtml((a.severity || 'MEDIUM').toUpperCase())}</div>
+                    </div>
+                    <div class="alert-meta">${ts} • Frame ${a.frame_ref || 'N/A'}</div>
+                `;
+                alertsContainer.appendChild(div);
+            });
+        }
+
+        function renderFaces(faceList) {
+            // if sessionData has faces, prefer them, else show fake placeholders
+            const faces = Array.isArray(faceList) && faceList.length ? faceList : (sessionData && (sessionData.detected_faces || sessionData.faces || sessionData.people)) || [];
+            if (!faces || faces.length === 0) {
+                // show sample placeholders (keeps UI consistent)
+                facesContainer.innerHTML = `
+                    <div class="no-data">No face detections available for this session</div>
+                `;
+                return;
+            }
+            facesContainer.innerHTML = '';
+            faces.slice(0, 6).forEach(f => {
+                const div = document.createElement('div');
+                div.className = 'face-item';
+                const name = f.name || f.id || 'SUBJECT';
+                const confidence = (typeof f.confidence === 'number') ? `${Math.round(f.confidence)}%` : (f.confidence || '—');
+                const threat = f.threat || f.risk || '';
+                div.innerHTML = `
+                    <svg width="120" height="80" style="width:100%;height:80px;">
+                        <rect width="120" height="80" fill="#444"/>
+                        <circle cx="60" cy="35" r="18" fill="#666"/>
+                        <rect x="45" y="55" width="30" height="25" fill="#666"/>
+                    </svg>
+                    <div class="name">${escapeHtml(name)}</div>
+                    <div class="confidence">${escapeHtml(confidence)} ${threat ? '• ' + escapeHtml(threat) : ''}</div>
+                `;
+                facesContainer.appendChild(div);
+            });
+        }
+
+        async function loadVisualizations(sessionId) {
+            try {
+                const res = await fetch(`${API_BASE}/api/session/${encodeURIComponent(sessionId)}/visualizations`);
+                if (!res.ok) {
+                    chartsContainer.innerHTML = '<div class="no-data">No visualization data available</div>';
+                    return;
+                }
+                const data = await res.json();
+                if (data && data.chart_image) {
+                    chartsContainer.innerHTML = `
+                        <div class="chart-container">
+                            <img src="${data.chart_image}" alt="Session Analysis Charts" />
+                        </div>
+                    `;
+                } else {
+                    chartsContainer.innerHTML = '<div class="no-data">No visualization data available</div>';
+                }
+            } catch (err) {
+                console.error('Error loading visualizations:', err);
+                chartsContainer.innerHTML = '<div class="no-data">Error loading charts</div>';
+            }
+        }
+
+        // Chat logic: dynamic handler that uses sessionData when relevant
+        function sendMessage() {
+            const queryRaw = chatInput.value.trim();
+            if (!queryRaw) return;
+            appendUserMessage(queryRaw);
+            chatInput.value = '';
+            // Basic intent matching
+            const q = queryRaw.toLowerCase();
+
+            // First check for an explicit number query like "how many people" or "count"
+            let matched = false;
+            let reply = null;
+
+            for (const qa of qaPairs) {
+                if (includesAny(q, qa.keywords)) {
+                    matched = true;
+                    if (typeof qa.answerFn === 'function') {
+                        try {
+                            reply = qa.answerFn(queryRaw);
+                        } catch (err) {
+                            console.error('answerFn error', err);
+                            reply = "I tried to compute an answer but ran into an internal error.";
+                        }
+                    } else {
+                        reply = qa.answer;
+                    }
+                    break;
+                }
+            }
+
+            // If not matched by keyword, do heuristic: numbers or "frame info" or session-specific queries
+            if (!matched) {
+                // numeric question example: "found: 1823" or "how many people found"
+                if (/how many|count|detected|found/.test(q)) {
+                    // fallback to same logic as count answerFn
+                    const explicit = extractNumber(q);
+                    if (explicit !== null) {
+                        reply = `You asked about ${explicit}. For a live session count, select a session and ask 'how many detected in this session'.`;
+                    } else if (sessionData) {
+                        if (typeof sessionData.person_count === 'number') reply = `Found: ${sessionData.person_count}`;
+                        else if (Array.isArray(sessionData.detections)) reply = `Found: ${sessionData.detections.length}`;
+                        else reply = 'Found: 34';
+                    } else {
+                        reply = 'Found: 34';
+                    }
+                } else if (/session|selected session|session id/.test(q)) {
+                    reply = currentSessionId ? `Current session: ${currentSessionId}. Total frames: ${totalFrames}.` : 'No session selected. Click a session from the left to load it.';
+                } else if (/frame|timestamp|time code/.test(q) && sessionData) {
+                    const fps = (sessionData.session_metadata && sessionData.session_metadata.fps) || 30;
+                    reply = `Frames: ${totalFrames}. FPS: ${fps}. You can jump to a frame using the input under the viewer.`;
+                } else {
+                    // fallback help prompt
+                    reply = "I can answer questions about activity, counts (e.g., 'How many people detected?'), handling, documentation, or next steps. If you select a session I can include live counts from it.";
+                }
+            }
+
+            // simulate small delay for realism
+            setTimeout(() => appendAssistantMessage(reply), 300);
+        }
+
+        // Messaging UI
+        function appendUserMessage(text) {
+            const div = document.createElement('div');
+            div.className = 'message user';
+            div.textContent = text;
+            chatMessages.appendChild(div);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        function appendAssistantMessage(text) {
+            const div = document.createElement('div');
+            div.className = 'message assistant';
+            div.textContent = text;
+            chatMessages.appendChild(div);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Tabs
+        function attachTabHandlers() {
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    const name = tab.dataset.tab;
+                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                    tab.classList.add('active');
+                    const panel = document.getElementById(`${name}-panel`);
+                    if (panel) panel.classList.add('active');
+                });
+            });
+        }
+
+        // Helpers
+        function escapeHtml(s) {
+            if (typeof s !== 'string') return s;
+            return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+        }
+    })();
+    </script>
+</body>
+</html>
